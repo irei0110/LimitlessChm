@@ -1,0 +1,528 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>阿修罗</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<style>
+html {
+	overflow-y:scroll;
+}
+
+body {
+	background-image: url(template1/back.png);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+#winchm_template_button {
+	position: fixed; 
+	float: right; 
+	right: 15px; 
+	top: 15px;
+}
+
+#winchm_template_navigation {
+	padding: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #4A4A4A;
+	text-align: left;
+}
+
+#winchm_template_title {
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #005680;
+	text-align: left;
+}
+
+#winchm_template_content{
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	width: auto  !important;
+	width: 100%;
+}
+
+
+#winchm_template_footer {
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	padding-top: 7px;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	border-top-style: solid;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #575757;
+	text-align: left;
+}
+
+@media print
+{
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
+#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation a:active {text-decoration: none; color: #004080}
+#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
+
+a:link	{text-decoration: underline; color:#0033cc}
+a:visited  {text-decoration: underline; color: #0033cc}
+a:active {text-decoration: underline; color: #0033cc }
+a:hover {text-decoration: underline;color: #ff0000;}
+
+</style>
+</head>
+
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(54);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=鬼剑士.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+<div id="winchm_template_button"><A href="New_Item62.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="奇迹剑士.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
+<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A>
+&gt;
+<A href="血统.htm">血统</A>
+&gt; 
+<A href="$$unsavedpage3.htm">人类</A> 
+&gt; 
+<A href="$$unsavedpage3.htm">特異本質</A> 
+&gt; 
+</div>
+
+<div id="winchm_template_title">总纲</div>
+<div id="winchm_template_content"><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">当你升级至C级时，你需要选择一条道路，一旦选择不可改变
+<P>
+ 
+<P>
+C级：
+<P>
+  
+<P>
+阿修罗
+<P>
+属性：智力+3，耐力+3
+<P>
+特性：魔力亲和，超凡感知（正负特性），坚韧战士
+<P>
+技能树：开启C级阿修罗技能树
+<P>
+特殊：无
+<P>
+描述：为了感知到波动，阿修罗们选择自戕双眼。
+<P>
+超凡感知：你失去双目，陷入不可避免的永久目盲状态，并且无法透过任何方式恢复，但你获得等于你敏感范围的盲感。
+<P>
+魔力亲和：你开启魔力池，你获得相当于本血统等级的施法者等级，但是本血统的施法者等级只对本血统下的法术有效，并且不能籍此学习和使用通用法术。
+<P>
+坚韧战士：当你穿着重甲时，你的盔甲防御增加等同于血统等级/点，同时你不受盔甲减值影响。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+B级：
+<P>
+属性：智力+4，耐力+4
+<P>
+特性：挫折意志（三特性）
+<P>
+技能树：开启B级阿修罗技能树
+<P>
+特殊：无
+<P>
+挫折意志：你每回合第一次受到源自敌人的伤害或对敌人造成伤害（范围攻击无论影响到多少敌人都视为一次伤害）时都会使你施展本血统技能树下的技能时所造成的所有与数值相关的最终效果提升1点（包括但不限于伤害，成功数，不良状态点数等），该效果持续一个场景，以此增加的效果上限为你的智力值。
+
+<P>
+ 
+<P>
+ 
+<P>
+A级: 
+<P>
+属性：智力+6，耐力+6
+<P>
+特性：超凡感知，超凡意志
+<P>
+技能树：开启A级阿修罗技能树
+<P>
+特殊：无
+<P>
+超凡感知：你在C级获得的盲感提升为盲视，且范围扩大至你的模糊范围。
+<P>
+超凡意志：你在意志检定上获得等同于你智力值的内在加值。
+<P>
+大暗黑天：你现在免疫A级以下影响心灵的效果。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+S级： 
+<P>
+属性：智力+8，感知+8，耐力+8
+<P>
+特性：觉醒（双特性），大暗黑天
+<P>
+技能树：S级阿修罗技能树
+<P>
+特殊：无
+<P>
+大暗黑天：你现在免疫S级以下负面影响心灵的效果。
+<P>
+觉醒：你在施展本血统技能树下的技能时所造成的所有与数值相关的最终效果翻倍（包括但不限于伤害，成功数，不良状态点数等），该翻倍效果不计算其他能力带来的效果（包括但不限于额外的附加成功与伤害，将DP转换为附加成功的能力等），并在计算这些效果之前结算，但本能力带来的额外效果不计入伤害与法术上限中。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+ 
+<P>
+C级阿修罗技能树：
+
+<P>
+ 
+<P>
+地裂·波动剑
+<P>
+威力值：4
+<P>
+价格：C+1000
+<P>
+动作：标准动作
+<P>
+能耗：3点魔力
+<P>
+射程：见下
+<P>
+目标：多个目标
+<P>
+范围：见下
+<P>
+持续：立即
+<P>
+描述：最基础的波动剑，阿修罗的基本技能之一。
+<P>
+效果：你进行一次近战白刃攻击检定，该次检定获得12DP能量加值，之后对面前等同于你白刃技能等级*10米锥形范围内的目标造成该次检定成功数的纯能量严重伤害，反射豁免，但受影响目标在该次反射检定上需要承受相当于本法术威力值的无名减值。
+<P>
+这是一个法术。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+波动爆发
+<P>
+威力值：4
+<P>
+价格：C+1000
+<P>
+动作：标准动作
+<P>
+能耗：3点魔力
+<P>
+射程：无
+<P>
+目标：以自身为中心
+<P>
+范围：半径5米的球型范围
+<P>
+持续：立即
+<P>
+描述：利用波动的力量推开敌人。
+<P>
+效果：你对范围内的敌人造成等于威力值*3的纯能量严重伤害，无法豁免。同时你再进行一次智力+白刃检定分别对抗范围内目标的力量+运动检定，你每胜出1点，目标便会被击退1米。
+<P>
+
+<P>
+这是一个法术。
+<P>
+ 
+<P>
+ 
+<P>
+邪光斩
+<P>
+威力值：4
+<P>
+价格：C+1000
+<P>
+动作：标准动作
+<P>
+能耗：3点魔力
+<P>
+射程：白刃技能等级*10米
+<P>
+目标：多个目标
+<P>
+范围：见下
+<P>
+持续：立即
+<P>
+描述：挥剑向前方敌人发出巨大的剑气攻击，可以给予命中的敌人多次伤害。
+<P>
+效果：你选定任意一个方向，之后挥出一道长宽高皆为2米的剑气，剑气在抵达射程上限后便会立刻消失，触碰到剑气的单位需要承受等同于本法术威力值*2的纯能量严重伤害，不可豁免。同时，你进行一次智力+白刃检定，受到伤害的敌人需要通过一个DC等同于你该次检定成功数的力量+运动或敏捷+运动检定，如果检定未通过，敌人会再受到等同于本法术威力值的纯能量严重伤害并被击退差值*1米。
+<P>
+这是一个法术。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+B级阿修罗技能树：
+
+<P>
+ 
+<P>
+冰刃·波动剑
+<P>
+前提：波动剑
+<P>
+威力值：6
+<P>
+价格：B+3000
+<P>
+动作：标准动作
+<P>
+能耗：5点魔力
+<P>
+射程：见下
+<P>
+目标：多个目标
+<P>
+范围：见下
+<P>
+持续：立即
+<P>
+描述：波动剑的进阶技巧之一。
+<P>
+效果：你进行一次近战白刃攻击检定，该次攻击获得18DP能量加值，之后对面前等同于你白刃技能等级*10米锥形范围内的目标造成该次检定成功数的寒冰严重伤害，反射豁免，但受影响目标在该次反射检定失去相当于本法术威力值的成功数，若目标受到伤害，则受到与伤害等额的冻结点数，该冻结点数不可豁免，可叠加。
+<P>
+
+<P>
+这是一个法术。
+<P>
+ 
+<P>
+ 
+<P>
+杀意波动
+<P>
+前提：无
+<P>
+威力值：6
+<P>
+价格：B+3000
+<P>
+动作：标准动作
+<P>
+能耗：5点魔力
+<P>
+射程：以自身为中心
+<P>
+目标：见下
+<P>
+范围：半径10米的范围
+<P>
+持续：传奇智力*1轮
+<P>
+描述：喷射强烈杀意的波动，使周围敌人受到持续的伤害，威力巨大。
+<P>
+效果：任何处于范围内的敌人每轮行动开始时均受到本法术威力值的不可豁免、吸收、抵消的精神严重伤害。任何处于范围内的友方目标在攻击，防御以及对抗检定上皆获得本法术威力值*2的士气加值。
+<P>
+这是一个法术。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+A级阿修罗技能树：
+
+<P>
+ 
+<P>
+不动明王阵
+<P>
+威力值：10
+<P>
+价格：A+6000
+<P>
+动作：整轮动作
+<P>
+能耗：7点魔力
+<P>
+射程：无
+<P>
+目标：以你为中心
+<P>
+范围：半径5米的范围
+<P>
+持续：1轮
+<P>
+描述：阿修罗的最强技能之一。
+<P>
+效果：你召唤出不动明王阵，所有处于范围内的单位在其每轮行动开始时均会受到相当于本法术威力值*2的不可避免的精神严重伤害。然后目标进行一个DC等于你智力值的力量+肉搏（擒抱）或敏捷+运动（逃脱）检定。若失败，则目标直接定身。
+<P>
+本法术持续期间你免疫擒抱、摔绊、冲撞、失速与任何会降低你基础移动速度的不良状态点数或者类似效果。
+<P>
+这是一个法术。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+爆炎·波动剑
+<P>
+威力值：10
+<P>
+价格：A+6000
+<P>
+动作：标准动作
+<P>
+能耗：7点魔力
+<P>
+射程：见下
+<P>
+目标：见下
+<P>
+范围：见下
+<P>
+持续：立即
+<P>
+描述：波刃剑的进阶技巧之一。
+<P>
+效果：你进行一次白刃攻击检定，对你正前方白刃等级*50米的锥形范围内的目标造成等同与该次检定成功数的火焰恶性伤害，反射豁免，但受影响的目标在该次反射检定失去等同于你该次白刃技能等级+威力值的成功数。
+<P>
+这是一个法术。
+<P>
+
+<P>
+ 
+<P>
+ 
+<P>
+S级阿修罗技能树：
+
+<P>
+ 
+<P>
+暗天波动眼
+<P>
+前提：无
+<P>
+威力值：16
+<P>
+价格：S+10000
+<P>
+动作：全回合动作
+<P>
+能耗：9点魔力
+<P>
+射程：无
+<P>
+目标：自身
+<P>
+范围：无
+<P>
+持续：5轮
+<P>
+描述：使用暗天波动眼时，一定时间内在自身周围制造黑暗领域，使之强化自身和弱化敌人来更容易地压制敌人。
+<P>
+被动效果：你所有波动剑法术的威力值提升等同于本法术威力值*1点。
+<P>
+效果：本效果持续期间，距离你不超过你敏感范围的敌人在攻击检定上承受等同于你智力值的无名减值。你的普通攻击会额外产生一道刺轮（这是一个纯画面效果），对你正前方宽与高皆为你武器体积/米，长为你白刃技能等级/米范围内的所有敌人造成不可豁免的相当于你武器伤害的纯能量严重伤害。
+<P>
+此外，当你施展波动剑法术时，其有如下变化：
+<P>
+地裂·波动剑：施展本法术时你改为以背后生成的光翼进行攻击（这是一个纯画面效果），这会令该法术效果改为你进行一次近战白刃攻击检定，该次检定获得24DP能量加值，之后你敏感范围内的所有敌人造成该次检定成功数的纯能量严重伤害，反射豁免，但受影响目标在该次反射检定上需要承受相当于你智力值+威力值的无名减值。
+<P>
+冰刃·波动剑：在施展本法术的同时你还可以在受影响目标脚下生成一根地刺（这是一个纯画面效果），你可以对目标分别进行一次近战白刃攻击，造成纯能量严重伤害，每造成1点伤害便将目标朝你拉近10米，最多拉近至与你邻接的位置。
+<P>
+爆炎·波动剑：在施展本法术的同时你还可以在敌人背后生成一排的长枪（这是一个纯画面效果），你可以对所有目标再分别进行一次近战白刃攻击，该次攻击会使敌人陷入S级措手不及效果，造成纯能量严重伤害。
+<P>
+这是一个法术。
+<P>
+<SPAN 
+lang=EN-US></SPAN></SPAN></P></div> 
+<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+</body>
+</html>

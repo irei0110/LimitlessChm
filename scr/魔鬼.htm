@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(192);
+  parent.nav.tree.selectNode(236);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,559 +179,120 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="狡诈无比邪术师.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="魔人.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="血统.htm">血统</A> &gt; <A href="$$unsavedpage7.htm">黑暗生物</A> &gt; </div>
-<div id="winchm_template_title">魔鬼</div>
-<div id="winchm_template_content">
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">在无数的经文中，你的行为被否定，被妖化，凡是和你交易的人都将视为对文明最大的背叛，但是，总是有人和你交易。因为，公平。<SPAN 
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="恶魔.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="魔鬼.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="血统.htm">血统</A> &gt; <A href="$$unsavedpage26.htm">黑暗生物</A> &gt; </div>
+	<div id="winchm_template_title">恶魔</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><P class=MsoNormal 
+style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 150%; mso-pagination: widow-orphan" 
+align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">魔鬼血统<SPAN 
 lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">你是这个宇宙中最聪明的交易贩子，最聪明，也最狡猾。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"><SPAN 
-lang=EN-US></SPAN></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>D</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">属性：感知<SPAN 
-lang=EN-US>+1</SPAN>，风度<SPAN lang=EN-US>+1</SPAN>，操控<SPAN 
-lang=EN-US>+1</SPAN>，沉着<SPAN lang=EN-US>+1</SPAN>，智力<SPAN 
-lang=EN-US>+1</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">能量：灵魂<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特性：巧舌如簧。绝对理智<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">技能树：无<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊：由于没有技能树，额外获得<SPAN 
-lang=EN-US>1</SPAN>点属性。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">绝对理智：所有的魔鬼都信奉理智才能解决一切问题，而这种特性已经在时间的洪流下融入他们的血液。所有的魔鬼在面对影响他们心灵的效果面前对抗获得在等同于血统等级的自动成功，若该效果不能对抗，则忽略血统等级的点数。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">巧舌如簧：魔鬼对于如何说服别人经受过严格的训练，这种训练甚至已经融入他们的神经系统，在任何社交判定时，魔鬼额外<SPAN 
-lang=EN-US>+2DP</SPAN>加值。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>C</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">属性：感知<SPAN 
-lang=EN-US>+1</SPAN>，风度<SPAN lang=EN-US>+1</SPAN>，操控<SPAN 
-lang=EN-US>+2</SPAN>，沉着<SPAN lang=EN-US>+2</SPAN>，智力<SPAN 
-lang=EN-US>+2</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">能量：灵魂<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特性：社交达人，洞察人心<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">技能树：无<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊：由于没有技能树，额外获得<SPAN 
-lang=EN-US>2</SPAN>点属性<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">洞察人心：你可以快速的了解一个人需要什么。你可以以自由动作通过感知<SPAN 
-lang=EN-US>+</SPAN>感受来判断一个目标，的基础需求、动力和情绪。口渴、饥饿、恐惧、疲乏、痛苦、愤怒、憎恨、怀疑、好奇、友善等。同时，针对该目标，你接下来的所有行动获得你成功数的<SPAN 
-lang=EN-US>DP</SPAN>加值。（此能力只能影响有灵魂的目标）<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">蛊惑：每场景一次。你可以压制一个目标的负面精神状态以及情绪状态（恐惧、猜疑、魅惑、憎恨）达一场景。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>B</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">属性：感知<SPAN 
-lang=EN-US>+2</SPAN>，风度<SPAN lang=EN-US>+1</SPAN>，操控<SPAN 
-lang=EN-US>+3</SPAN>，沉着<SPAN lang=EN-US>+2</SPAN>，智力<SPAN 
-lang=EN-US>+3</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">能量：灵魂<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特性：诡诈交易。灵魂黑洞。社交达人<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">技能树：无<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊：由于没有技能树，额外<SPAN 
-lang=EN-US>3</SPAN>点属性<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">诡诈交易：在建立契约时你通过一个成功的哄骗检定【对抗对方的感知<SPAN 
-lang=EN-US>+</SPAN>感受】，在契约内容中修改等于双方成功数差值的字眼。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂黑洞：没有任何人能不出代价的从你手中夺走灵魂，就算是创造这个宇宙的神也不行。在你成功获得一个灵魂以后，就算是多么强大的力量介入，也不能强行从你手中取走灵魂。哪怕你死了也不行。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">社交达人：你在一切交涉检定中获得<SPAN 
-lang=EN-US>4</SPAN>点自动成功。同时你进行交涉所需动作下降一级。（一天变为<SPAN 
-lang=EN-US>1</SPAN>小时，一小时变为<SPAN lang=EN-US>10</SPAN>分钟，<SPAN 
-lang=EN-US>10</SPAN>分钟变为<SPAN lang=EN-US>1</SPAN>分钟，<SPAN 
-lang=EN-US>1</SPAN>分钟变为<SPAN lang=EN-US>1</SPAN>轮，整轮变为标准）<SPAN lang=EN-US> 
-</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>A</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">属性：感知<SPAN 
-lang=EN-US>+3</SPAN>，风度<SPAN lang=EN-US>+2</SPAN>，操控<SPAN 
-lang=EN-US>+4</SPAN>，沉着<SPAN lang=EN-US>+3</SPAN>，智力<SPAN 
-lang=EN-US>+4</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">能量：灵魂<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特性：威压之光，强制交涉，灵魂化身，炫酷登场<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">技能树：无<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊：由于没有技能树，额外<SPAN 
-lang=EN-US>4</SPAN>点属性<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">威压之光：在和你对抗社交类判定时，他们需要投两次，取低。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">强制交涉：当你的目标拒绝与你交涉时，你可以强制进行一次说服对抗，若你成功。则该目标必须跟你交涉，并且本场景内若其再次主动放弃与你交涉，则其接下来的所有行动受到你们说服对抗成功数差值的减值，这是一个影响心灵的效果，持续一场景。针对每个目标每场恐怖片一次。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂化身：你可以花费<SPAN 
-lang=EN-US>1</SPAN>个灵魂来额外获得<SPAN lang=EN-US>1</SPAN>个迅捷动作，<SPAN 
-lang=EN-US>2</SPAN>个灵魂来获得<SPAN lang=EN-US>1</SPAN>个移动动作，<SPAN 
-lang=EN-US>3</SPAN>个灵魂来获得一个标准动作。每回合该能力只能使用一次。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">炫酷登场：你可以花费一个整轮动作摆<SPAN 
-lang=EN-US>POSE</SPAN>来进入战斗，进入场景或者其他关键时刻，此时你接下来本场景内的所有行动都获得等于你风度值的加值。每场景一次。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂：魔鬼的一切力量皆来自于灵魂，魔鬼血统本身并不提供灵魂给购买者。同时灵魂不作为能量池，不能以任何能量池的形式来强化和使用。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">魔鬼对灵魂的储存量为：<SPAN 
-lang=EN-US>D</SPAN>级为<SPAN lang=EN-US>1</SPAN>，<SPAN lang=EN-US>C</SPAN>级为<SPAN 
-lang=EN-US>3</SPAN>，<SPAN lang=EN-US>B</SPAN>级为<SPAN lang=EN-US>9</SPAN>，<SPAN 
-lang=EN-US>A</SPAN>级为<SPAN lang=EN-US>27</SPAN>，<SPAN 
-lang=EN-US>S</SPAN>级以上随意储存。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">获得灵魂的方法：<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">契约建立：你可以通过一个交易双方认为公平的契约来获得灵魂。交易一旦达成则双发不得反悔。若一方反悔，则失去所有意志点。并且陷入心魔状态，出现一个与你当前属性，技能，能力，特性一样的角色与你进行心魔对抗。该对抗别人无法干涉，无视心灵效果无法无视该能力。若你胜利则无事发生。若你失败，则对方依然获取你的交易物品，若该物品无法交易，则获得你的生命。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊：你只能跟有灵魂的智慧生物才可以签订契约。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">契约内容可以不是灵魂的交易。任何东西都可以拿来交易。但是一般情况下，魔鬼会选择要你的灵魂。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">例如，一个魔鬼在报纸上刊登，【谁愿意用灵魂换取黄金？】，并且写明任何拿着这份广告的人找魔鬼都能获得一顿黄金。如果真有人拿着广告来找你，而你真的给了他一顿黄金，在黄金给与他的一瞬间，他的灵魂就将归你所有，你的灵魂储存量自动增加一点。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">失去灵魂的人，并不会死；但是他将失去感受爱，感受一切美好之物的权利，他会活到他能活的那么久，但是这期间他的一切感受都是虚假的，他不能获得真爱，因为他无法感受到，他不会欣赏最能感动人心的乐曲、画卷，小说，因为他的心已经死了。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">若失去灵魂的人为轮回小队的角色，则其将失去开更高阶基因锁的机会，同时失去“真爱”。以及每次花费意志增加<SPAN 
-lang=EN-US>DP</SPAN>时，额外花费<SPAN lang=EN-US>1</SPAN>点意志。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">特殊，如果在交易完成后，三天内，有更加强大的力量介入，则该交易有可能作废。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">例如在一个真的有上帝存在的地方，那名和你交易的人去教堂忏悔，并且上帝认同了他的忏悔，他的灵魂将被强行从你手中取走，虽然只有一半，但是他将不再受到失去灵魂的一切坏处。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂的效果：</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂是一个西方特殊的黑暗性质能量池<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">拥有的灵魂越多，则意味着魔鬼越强大。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵魂威能<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">在进行任何判定时，你可以消耗<SPAN 
-lang=EN-US>1</SPAN>点意志。计算该魔鬼当前拥有的灵魂数量，每有一个灵魂则其在任意检定上获得等额的<SPAN 
-lang=EN-US>DP</SPAN>加值。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵感<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">任何时候当你的检定失败时，你可以消耗<SPAN 
-lang=EN-US>3</SPAN>个灵魂，重置本次检定，然后<SPAN 
-lang=EN-US>2</SPAN>个结果取高，针对一次检定该能力只能使用一次。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">替死<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">当你受到足以致命的伤害或者即死效果时，你可以消耗<SPAN 
-lang=EN-US>5</SPAN>个灵魂，无视本次伤害。同时自己沉着上的附加成功数的生命值转为完好。<SPAN 
-lang=EN-US></SPAN></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+<P class=MsoNormal 
+style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 150%; mso-pagination: widow-orphan" 
+align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">本质：特异本质 
+<SPAN lang=EN-US></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 150%; mso-pagination: widow-orphan" 
+align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><p>描述：在无数的经文中，你的行为被否定，被妖化，凡是和你交易的人都将视为对文明最大的背叛，但是，总是有人和你交易。因为，公平，即使是神明的许诺也没有你的一纸契约具有诱惑力，因为你所属的规则上，是绝对的公正。</p>
+<p>你是多元宇宙中最聪明的交易贩子，最聪明，也最狡猾。原初的魔鬼是来源于犹太圣经，也就是基督教的旧约，当魔鬼这个概念映射到其他世界，来源于魔鬼这个概念的物种就出现了，也可以说这是规则所化。不管是人类堕落而成还是其他扭曲来源而形成，无关外表，当魔鬼这个来自规则而来的概念来到你身上，你就是一个魔鬼了。</p>
+<p></p><p></p>
+<p>D级</p>
+<p>属性：智力+1，操控+2，沉着+1</p>
+<p>能量池：无</p>
+<p>技能树：无</p>
+<p>特性：魔鬼视觉（双特性），魔鬼本质，灵魂储备，黑暗生物（负特性），诸神之敌（负特性），魔鬼契约（双特性）</p>
+<p>特殊：由于没有技能树和能量池，所以额外获得2个特性。</p>
+<p>描述：你成为了一个魔鬼，来自魔鬼的这个概念融入了你，他无关你的前身是何物种，也不会主动改变你的外貌，但是其内在已经改变，这使得你可以清楚地看到世界的本质。魔鬼最强大的，也是令人最为恐惧的，就是魔鬼的契约，没有任何人能违背它，包括你自己。</p>
+<p>魔鬼视觉：你获得灵感视觉与黑暗视觉。</p>
+<p>魔鬼本质：在进行互动系技能相关检定时，你获得2DP内在加值。</p>
+<p>黑暗生物：你成为黑暗生物。</p>
+<p>诸神之敌：你无法获得和使用任何具信仰导向的能力。</p>
+<p>灵魂储备：你开启一个特殊的刻度，名为灵魂，该刻度没有上限。你以&ldquo;魔鬼契约&rdquo;特性获得的每一条灵魂都会寄存在你体内并使你的灵魂刻度增加1点，若失去、释放或消耗了该灵魂则你的灵魂刻度也会降低1点。你可以花费一个自由动作无条件释放任意条你拥有的灵魂，被释放的灵魂会立刻回到原主体内，若原主已死亡则灵魂会当场消失不见。</p>
+<p>此外，你每次进行检定时，可以消耗最多不超过本血统等级*1条灵魂，并使你该次检定获得等额的附加成功，这无需动作。</p>
+<p>魔鬼契约：此外，你获得一个特殊的存储空间，该存储空间仅能用于存储你通过本特性获得的物品，从中存入或取出物品皆是一个移动动作，该空间可存储的单件物品体积不得超过你操控值的一半，同一时间仅能存储不超过你操控值*1件物品。</p>
+<p>现在在非战斗场景中，你能够花费一个整轮动作和一名位于你敏感范围内，自愿且有灵魂，同时不是主神空间造人与所属玩家的独立个体（如召唤物，分身，人工智能，AI等）的智慧生物签订一份交易契约，你可以自行设定变出契约的动作，例如打个响指或是吹一声口哨，随后一纸自动写明了你与对方协商好的交易内容的契约便会自动出现在你手上，在契约签订后该契约会一分为二并融入你与对方体内，这是一个纯画面效果。</p>
+<p>对方必须是自愿和你签订该契约，若其是在精神控制或类似的能力影响下签下契约，则该契约直接作废。契约签订后双方必须立刻完成该次交易，并且对方可以选择将自己的灵魂交易给你。</p>
+<p>失去灵魂的人并不会死，但是他将失去感受爱，感受一切美好之物的权利，他会活到他能活的那么久，但是这期间他的一切感受都是虚假的，他不能获得真爱，因为他无法感受到，他不会欣赏最能感动人心的乐曲、画卷，小说，因为他的心已经死了。</p>
+<p>若失去灵魂的人为轮回小队的角色，则其将失去开更高阶基因锁的机会，并且每次使用意志力的基础用法时必须额外花费1点意志力。</p>
+<p>契约一旦达成，双方皆不得反悔，并且必须按契约上的内容执行交易。若任意一方拒绝执行交易或是没有完成契约上的内容，则会立刻死亡，若魔鬼并非反悔方，则其还能够获得对方的灵魂，除非魔鬼将灵魂释放，否则因此死亡的反悔方无法通过任何方式复活，这是一个等同魔鬼血统等级的因果律效果。</p>
+<p>在这一阶段，除了物品外，你还能够将任意一种不良状态与点数视作一件物品来进行交易，这类交易有以下两种交易方式：</p>
+<p>1.你与一名当前具备不良状态或不良状态点数的角色签订契约，随后你能够将其身上对应的一种不良状态或点数视作一件物品来取走，这会使该单位不再受到对应的影响，以此法取走的不良状态和点数等级不得超过本血统等级，并且只能储存在魔鬼的特殊存储空间内（从不同单位身上分别取得的不良状态点数视作两件独立的物品），你每以此法存储4点不良状态点数或1项不良状态便会占用你1点意志力，持续至你将该不良状态或点数再次交易出去为止。</p>
+<p>2.在签订契约时，你可以将透过本特性获得的不良状态和点数作为物品交给对方，如果你或对方拥有能够造成不良状态和点数的能力，也可以由你或对方施展该能力，然后对方自愿承受任意点对应的不良状态和点数，并以此作为对方用于交易的筹码，因此法而承受的不良状态与点数等级不得超过你的血统等级，其带来的负面效果也无法以任何方式避免或是转换为正面效果，除非你或其他同样具备魔鬼血统的单位与对方签订契约并取走这部分不良状态和点数，否则其持续时间等同于契约上注明的时间并且无法以任何其他方式提前消除和恢复，若契约上没有注明则持续时间默认为永久。</p>
+<p>特殊的是，直到本血统提升至A级之前，如果在交易完成后的三天内有更加强大的力量介入，则对方可能可以无条件取回自己交易给你的物品，例如在一个真的有上帝存在的地方，一名使用灵魂作为筹码和你交易的人去教堂忏悔，并且上帝认同了他的忏悔，他的灵魂将被强行从你手中取走，并且他将不再受到失去灵魂的一切坏处。</p>
+<p>最后，无论如何，若你死亡超过24小时，你已签订的所有契约会立刻作废，与你交易的目标可以无条件取回自己交易给你的物品。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>C级</p>
+<p>属性：智力+1，操控+3，沉着+2</p>
+<p>技能树：无</p>
+<p>特性：提升-魔鬼本质，提升-魔鬼视觉，花言巧语</p>
+<p>特殊：由于没有技能树，所以额外获得1个特性。</p>
+<p>描述：灵魂之力是魔鬼实力的证明，越强大的魔鬼所有拥有的灵魂就越多，没有人知道魔鬼到底能储存多少灵魂，就算你是一个最低级的魔鬼，若你有几个世界人们的灵魂储蓄量，也敢和上帝叫板。</p>
+<p>提升-魔鬼本质：魔鬼最重要的本领就是利用话语与对方进行交易。现在你可以与任何生物交流。</p>
+<p>提升-魔鬼视觉：你只需要通过观察就能了解他人的想法，每轮一次，针对一个位于你敏感范围内的目标，你可以花费标准动作用感知+感受（察言观色）对抗对方的智力或操控+掩饰检定，如果你胜出，则你能即时感觉到对方基础的需求、动力和情绪，例如口渴、饥饿、恐惧、疲乏、痛苦、愤怒、憎恨、怀疑、好奇、友善，以及其他种种感情都可被感知，同时你可以读取其内心的想法，每轮你以此法所读取的词组数量不得超过你的智力值，以此法读取想法时，会优先读取能够组合成完整句子的词组，该能力持续一个场景。</p>
+<p>花言巧语：你在近战肉搏攻击和近战白刃攻击中选定一项，选定后不可更改，之后你可以用操控代替力量作为关键属性进行该检定。此外，你进行&ldquo;匆忙的交涉检定&rdquo;只需一个标准动作。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>B级</p>
+<p>属性：智力+2，操控+4，沉着+2</p>
+<p>技能树：无</p>
+<p>特性：魔鬼之力，有偿借贷（双特性），幕后的诉说者</p>
+<p>特殊：由于没有技能树，所以额外获得1个特性。</p>
+<p>描述：在这世界上只有魔鬼不会反悔，如果有，他就不是魔鬼了，而是一个舞台上的小丑。现在开始，魔鬼契约的真正威能开始展现，你被人称为完美的交易者，你总是能神不知鬼不觉地来到目标身边，并将语言化为利刃贯穿目标的身体。</p>
+<p>魔鬼之力：你在近战肉搏攻击和近战白刃攻击中选定一项，选定后不可更改，之后当你以操控代替力量进行该次检定时，可以用操控代替力量作为关键属性计算伤害上限。</p>
+<p>有偿借贷：在这一阶段，你能够执行的交易类型再增加以下两种：</p>
+<p>1.你可以将一名单位在一项检定上永久拥有的加值视作一件物品来进行交易，交易完成后对方会失去这部分加值，以此法获得的加值只能储存在魔鬼的特殊存储空间内或是用于你身上，以此法获得的加值必须独立计算且无法叠加，以此法交易的加值无论如何也只能持续一部影片，在效果持续期间，进行过该类契约的单位无法以任何方式获得洗点或类似效果带来的好处，在持续时间结束后，若原主仍存活并拥有原本提供该加值的能力，则该加值会返还给原主，否则该加值会直接消失。</p>
+<p>例如，一名目标通过血统能力在力量相关检定上提升4DP增强加值，该目标能够将这其中2DP增强加值视作其持有的一件物品来与你交易，而在你获得该加值后，你可以使自己在力量相关检定上获得2DP增强加值，或是将这部分加值作为物品交给其他单位，若这么做，该单位则会在力量相关检定上获得2DP增强加值，而在持续时间结束后，通过本特性交易的加值会立刻回到原主处。</p>
+<p>2.你可以将一名单位拥有的整个能量池视作一件物品来进行交易，交易完成后对方会失去该能量池，以此法获得的能量池只能储存在魔鬼的特殊存储空间内或是用于你身上，以此法获得的能量池大小与获得者当前拥有的对应能量池大小取高计算，以此法交易的能量池无论如何也只能持续一部影片，在效果持续期间，进行过该类契约的单位无法以任何方式获得洗点或类似效果带来的好处，在持续时间结束后，若原主仍存活并拥有原本提供该能量池的能力，则该能量池会返还给原主，否则该能量池会直接消失。</p>
+<p>幕后的诉说者：你能够花费一个迅捷动作获得隐形效果，持续至你以一个迅捷动作主动关闭为止，这是一个等同于本血统等级-1级的特异本质反侦测能力。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>A级</p>
+<p>属性：智力+3，操控+6，沉着+3</p>
+<p>技能树：无</p>
+<p>特性：算无遗漏（双特性），灵魂大师，诡诈交易</p>
+<p>特殊：由于没有技能树，所以额外获得1个特性。</p>
+<p>描述：&ldquo;在你行动之前我早已算到了，所以你的攻击对我无用！&rdquo;</p>
+<p>算无遗漏：每场景一次，你额外获得1个准备动作，该准备动作可以在你任意一轮中宣言使用，并且宣言该准备动作既不会消耗你的标准动作也不会使你下一轮失去动作，同时你免疫A级措手不及与B级接触攻击。</p>
+<p>灵魂大师：每轮一次，当你受到足以致命的伤害或者即死效果时，你可以消耗5个灵魂，无视本次伤害。同时将等于自己传奇沉着的生命值转为完好。</p>
+<p>诡诈交易：在签订契约的同时你可以进行一次唬骗检定对抗对方的察言观色检定，若你成功则可以在契约内容中修改等同于差值一半的字眼，在场的其他单位也需要被动进行一次察言观色检定来与你该次唬骗检定对抗，若其对抗失败则同样无法发现契约已被修改，若成功则能够得知你修改了契约内容。此外，任何目标在和你进行与互动系技能相关的对抗检定时，他们需要投两次，取低者计算。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>S级：魔鬼</p>
+<p>属性：智力+8，操控+8，沉着+8</p>
+<p>技能树：无</p>
+<p>特性：公正的代言人（双特性），提升-魔鬼契约，不朽</p>
+<p>特殊：由于没有技能树，所以额外获得1个特性。</p>
+<p>描述：&ldquo;不管是经历了什么磨难，你终于走到了这一波，恭喜！新上任的公正之神是我们的老朋友魔鬼！嗯？似乎有什么不对？&rdquo;</p>
+<p>&ldquo;哦，客官，你看看这颗星球怎么样？不够？没关系，这里还有几个宇宙&rdquo;。现在你的魔鬼契约，不，或许已经改名为公正之神或契约之神的契约了吧。他可以交易的限制，变为整体或完整的概念，比如星球甚至神格。</p>
+<p>公正的代言人：没有谁比你的契约更加彰显公正了，除非你又搞语言陷阱了。你获得0级神格。</p>
+<p>提升-魔鬼契约：若你所在的世界有主观意识（例如Fate系列中的盖亚、阿赖耶识等），你可以随时尝试与他正常对话。此外，你现在能够将神格等级与神职视作一件物品来交易，交易完成后对方会失去对应的神格等级和神职，以此法获得的神格等级与神职只能储存在魔鬼的特殊存储空间内或是用于你身上，以此法获得的神格等级高低与获得者当前拥有的神格等级高低取高计算，以此法交易的神格等级无论如何也只能持续一部影片，在效果持续期间，进行过该类契约的单位无法以任何方式获得洗点或类似效果带来的好处，在持续时间结束后，若原主仍存活并拥有原本提供该神格等级和神职的能力，则该神格等级和神职会返还给原主，否则该神格等级和神职会直接消失。</p>
+<p>例如：你与一个神格0以上的拥有神职的神牴交易神格，若你成功交易并获得神格，那么你可以选择将神格融入并提升自身神格等级，并获得你没有的神职，提升的神格等级取高不增加，但是神职不会覆盖或移除，比如你获得了一个神格2，神职自然和生命，融入自身之后，你又获得了一个神格3，神职自然、生命与森林，那么融入自身之后，取高变为神格3，以获得的神职不会重复获得，所以自身拥有自然、生命与森林三个神职并能够如常使用超凡神圣能力。</p>
+<p>不朽：若你死亡，你可以选择在5分钟之后通过本能力复活，将生命值的一半转为完好，所有能量池恢复一半，并且所有在冷却时间中的技能或者特性全部重置。本次复活不占用复活次数，但需要消耗你身上等同于你当前D级强化数量之和的灵魂。</p>
+<p></p>
+<p></p><SPAN lang=EN-US></SPAN></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

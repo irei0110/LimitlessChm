@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(247);
+  parent.nav.tree.selectNode(352);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,334 +179,340 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="机装少女改造.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="崩源体_Bugster.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage11.htm">科技类改造</A> &gt; </div>
-<div id="winchm_template_title">星际战甲</div>
-<div id="winchm_template_content">
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">这是一个改造，改造价值<SPAN 
-lang=EN-US>C+3000<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">距今几千年后的宇宙，一种神秘的病毒忽然间席卷了整个地球。幸存的人类发现，病毒已经将大部分人变为怪物。走投无路的人类设法离开地球并征服了太阳系，他们制造了一种半机械半<SPAN 
-lang=EN-US>AI</SPAN>的奥罗金来帮助仅存的人类维护统治，而在奥罗金时代后期爆发了一场几乎毁灭整个文明战争，当年的病毒再次归来，他们毁灭了大半个文明之时，部分幸存者将注意力转向了虚空，那个令一切科学和理性崩溃的地狱空间寻找可以对抗病毒的可能，而最终探险者在虚空中活着回来，并且获得了对抗病毒的强大的力量——天诺。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">他们重新拾起最古老的武器：‘枪与剑’，‘天诺’变成了奥罗金的救世主，这些战神向摧毁他们家园的敌人倾泻无数金属洪流和怒火，力图重新恢复了宇宙的平衡。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">对于很多天诺的敌人和被拯救者来说，天诺是一个从虚空中再现的种族，但真相却并不那么惊人，他们只是一群重拾古老地球神秘科技的战士。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">在遥久的战斗中天诺战甲被不断的挖掘与创新，大型的不同偏向的战甲诞生于这无尽的战斗当中，战士们不再单一的穿着同一套战甲子而是在不断的任务对应使用铠甲，不同的战甲对应了相应的属性和独特的技能，改变身上的战甲就类似于改变了“职业”，战甲粗略可分为群体攻击型战甲、单体输出战甲、召唤型战甲、控制领域战甲、操控元素战甲、暗杀战甲和辅助战甲，每个战甲都配备３项专属技能与一项必杀技能，可以根据需要，随时更换不同的机甲去完成任务。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">同时，有别于一般的铠甲，天诺战甲因需要面对上致太空下致地核的高强度任务，因此它拥有着海量的扩展性，一套全新没改装的天诺战甲有着<SPAN 
-lang=EN-US>30/30</SPAN>的扩展能量值，用来使用技能。 <SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes"></SPAN><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">改造完成后，你自动获得一件战甲，之后每获得一件战甲需要支付<SPAN 
-lang=EN-US>C+2000</SPAN>。你可以花费一个迅捷动作切换身上的战甲，每件战甲的能源单独计算，若战甲在休眠期，则每<SPAN 
-lang=EN-US>12</SPAN>小时回复<SPAN lang=EN-US>1</SPAN>点能量。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes"></SPAN><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">剑刃风暴——圣剑<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：重甲<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">描述：遗落于冥王星古老地层的基础型天诺战甲，传说在远古时代的地球，曾经有一位少女获得了‘圣剑’从而获得了不死的肉体，近乎无敌的战力。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲基本属性：盔甲防御<SPAN 
-lang=EN-US>10/10</SPAN>，盔甲减值<SPAN lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲特殊属性：【防弹】【防能量武器】【封闭<SPAN 
-lang=EN-US>2</SPAN>】<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">超级防护：穿戴者获得<SPAN 
-lang=EN-US>3</SPAN>点全伤害吸收，并且增加穿戴者的生命值上限<SPAN lang=EN-US>3</SPAN>点。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">电刃一闪：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个标准动作，指定一个<SPAN 
-lang=EN-US>12</SPAN>米之内的敌人，马上移动过去，并对其进行攻击，本次攻击获得<SPAN 
-lang=EN-US>+5DP</SPAN>器械加值。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">折光致盲：消耗<SPAN 
-lang=EN-US>10</SPAN>点能量，以一个标准动作，使<SPAN lang=EN-US>25</SPAN>米范围内的敌人致盲<SPAN 
-lang=EN-US>5</SPAN>轮，强韧豁免，每有<SPAN lang=EN-US>3</SPAN>点成功，则致盲轮数下降一轮。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">凌光标枪：消耗<SPAN 
-lang=EN-US>25</SPAN>点能量，以一个整轮动作召唤若干显赫刀剑对<SPAN 
-lang=EN-US>25</SPAN>米范围内的每个敌人直接造成<SPAN lang=EN-US>15</SPAN>点挥砍物理伤害。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">显赫刀剑：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个自由动作，召唤一把由能量造成的刀刃作为武器，此能量刀刃继承当前人造白刃武器的全部特性并且武器伤害<SPAN 
-lang=EN-US>+5L</SPAN>并且获得【能量武器】特性，每轮消耗３点能量。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN><o:p></o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p></o:p></SPAN>&nbsp;</P>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="机装少女改造.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="New_Item161.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage39.htm">科技本质改造</A> &gt; </div>
+	<div id="winchm_template_title">星际战甲</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
 <P 
-style="MARGIN: 0cm 0cm 10pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto; mso-line-height-alt: 11.0pt" 
+style="TEXT-ALIGN: left; MARGIN: 0pt; LINE-HEIGHT: 150%; mso-pagination: widow-orphan" 
 class=MsoNormal><SPAN 
-style="FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">电闪雷霆——伏特<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：轻甲<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲基本属性：盔甲防御<SPAN 
-lang=EN-US>7/7<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲特殊属性：【防弹】【防能量武器】<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">闪电甲胄：穿戴者获得<SPAN 
-lang=EN-US>5</SPAN>点雷电抗力。并且穿戴者进行的任何攻击检定，若成功命中，则额外造成<SPAN 
-lang=EN-US>1</SPAN>点电击伤害。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">移动闪电：穿戴者在移动中将不断积存电压，每移动<SPAN 
-lang=EN-US>100</SPAN>米则施放战甲技能和攻击时额外造成的电击伤害提升<SPAN lang=EN-US>1L</SPAN>，上限为<SPAN 
-lang=EN-US>10L</SPAN>，当停止移动<SPAN lang=EN-US>1</SPAN>轮，则额外伤害降低<SPAN 
-lang=EN-US>1</SPAN>点。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">连锁闪电：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，向敌人射击出一发<SPAN 
-lang=EN-US>6L</SPAN>伤害的电击弹，并对着弹点范围<SPAN lang=EN-US>15</SPAN>米范围内所有敌人做成<SPAN 
-lang=EN-US>3L</SPAN>范围伤害。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">疾风迅雷：消耗<SPAN 
-lang=EN-US>10</SPAN>点能量，以一个迅捷动作，伏特和其<SPAN 
-lang=EN-US>25</SPAN>米内的盟友本次移动速度翻倍。机械类载具不享受本加成。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">岚盾护体：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，在自己的前面释放出一个［全伤害吸收<SPAN 
-lang=EN-US>5</SPAN>］体积<SPAN 
-lang=EN-US>8</SPAN>的力场护盾，此力场护盾无法移动，我方人员在其后面可以获得等于其体积一半的掩蔽加值。此力场的盾的防御效果只对我方人员生效，当我方的远程攻击穿过护盾时，高速提升<SPAN 
-lang=EN-US>2</SPAN>点，该护盾持续<SPAN lang=EN-US>8</SPAN>轮。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">电闪雷鸣：消耗<SPAN 
-lang=EN-US>25</SPAN>点能量，以一个标准动作，释放出一个<SPAN lang=EN-US>10L</SPAN>电击伤害，以伏特为中心<SPAN 
-lang=EN-US>20</SPAN>米范围的圆形能量场，所有受到伤害的目标获得等于伤害数的麻痹点数，强韧豁免。在能量场内回合结束的目标，将再次受到无豁免的电击伤害和强韧豁免的麻痹点数，此时麻痹效果可叠加，并造成毁灭性效果。能量场持续三轮。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">钢铁堡垒——狂野犀牛<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：重甲<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲基本属性：盔甲防御<SPAN 
-lang=EN-US>11/11</SPAN>，盔甲减值<SPAN lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲特殊属性：【防弹】【防能量武器】<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">超级防护：穿戴者获得<SPAN 
-lang=EN-US>3</SPAN>点全伤害吸收，并且增加穿戴者的生命值上限<SPAN lang=EN-US>5</SPAN>点。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">力量增强：穿戴者的体积增加<SPAN 
-lang=EN-US>1</SPAN>点（这不会改变穿戴者的属性），同时力量获得<SPAN lang=EN-US>2</SPAN>点器械加值。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">高空坠落：当从高处下落时，根据其受到的坠落伤害造成等于其坠落伤害的冲击波范围严重伤害，反射豁免，范围为坠落的米数<SPAN 
-lang=EN-US>/3</SPAN>，对范围内所有受到伤害的目标进行一次力量<SPAN lang=EN-US>+</SPAN>运动检定，<SPAN 
-lang=EN-US>DC</SPAN>为受到的伤害，若失败则倒地。 <SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">犀牛冲锋：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个整轮动作，可以进行一次冲锋冲撞，冲锋的加值将加在冲撞检定中，并且额外获得<SPAN 
-lang=EN-US>8DP</SPAN>器械减值。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">铁骨钢筋：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，狂野犀牛临时获得拥有<SPAN 
-lang=EN-US>12</SPAN>点临时生命，本技能可重复使用，但是获得的临时生命不会超过<SPAN 
-lang=EN-US>12</SPAN>点。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">征战号角：消耗<SPAN 
-lang=EN-US>10</SPAN>点能量，以一个移动动作，给狂野犀牛和在其身旁<SPAN 
-lang=EN-US>25</SPAN>米范围队友在全检定上增加<SPAN lang=EN-US>2</SPAN>点自动成功士气加值，持续<SPAN 
-lang=EN-US>5</SPAN>轮。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">犀牛践踏：消耗<SPAN 
-lang=EN-US>25</SPAN>点能量，以一个整轮动作施展强力践踏扰乱时间的秩序，对<SPAN 
-lang=EN-US>25</SPAN>米范围内所有敌人做成<SPAN lang=EN-US>25L</SPAN>范围伤害，反射豁免，你以力量<SPAN 
-lang=EN-US>+</SPAN>运动进行检定，成功数为反射检定减值，若目标受到的伤害超过自身体积，则目标倒地。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">炼狱焚尘——永恒烈焰<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：轻甲<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲基本属性：盔甲防御<SPAN 
-lang=EN-US>7/7<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲特殊属性：【防弹】【防能量武器】<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">火焰甲胄：穿戴者获得<SPAN 
-lang=EN-US>5</SPAN>点火焰抗力。并且穿戴者进行的任何攻击检定，若成功命中，则额外造成<SPAN 
-lang=EN-US>1</SPAN>点火焰伤害。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">火焰充能：当自身处于<SPAN 
-lang=EN-US>[</SPAN>燃烧<SPAN lang=EN-US>]</SPAN>状态时，每轮恢复相当于<SPAN 
-lang=EN-US>[</SPAN>燃烧<SPAN lang=EN-US>]</SPAN>点数的能量并且额外造成的伤害提升对应燃烧点数的伤害值。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">豪炎火球：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，向敌人射击出一发<SPAN 
-lang=EN-US>6L</SPAN>伤害的火焰弹，并对着邻近敌人做成<SPAN lang=EN-US>3L</SPAN>范围伤害。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">加速燃烧：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，以永恒烈焰为中心<SPAN 
-lang=EN-US>30</SPAN>米范围内散满烈性火环，在火环形成后进入火环的敌人每在火环内移动<SPAN 
-lang=EN-US>1</SPAN>米承受一次火焰伤害，每次伤害<SPAN 
-lang=EN-US>1L</SPAN>，这些伤害在移动结束后计算目标本回合移动距离然后在回合结束时一并生效。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">惊惧热浪：消耗<SPAN 
-lang=EN-US>25</SPAN>点能量，以一个整轮动作，对近战距离内的地面进行重击，召唤出以打击点为圆心，<SPAN 
-lang=EN-US>10</SPAN>米半径，高度<SPAN 
-lang=EN-US>5</SPAN>的火焰之柱，在火环爆发时处于火环之内的敌人会被击退出火环之外，每击退<SPAN 
-lang=EN-US>1</SPAN>米承受一次火焰伤害，每移动<SPAN lang=EN-US>1</SPAN>米伤害<SPAN 
-lang=EN-US>3L</SPAN>。无法移动的敌人将承受剩余距离双倍的火焰伤害。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">无尽火海：消耗<SPAN 
-lang=EN-US>10</SPAN>点能量，以永恒烈焰为中心对<SPAN 
-lang=EN-US>25</SPAN>米范围内的敌人身上无止镜的召唤火柱，火柱每回合将对目标造成<SPAN 
-lang=EN-US>6L</SPAN>火焰伤害，若对目标造成火焰伤害，则附带等同于火焰伤害的燃烧点数，每维持<SPAN 
-lang=EN-US>1</SPAN>轮消耗<SPAN lang=EN-US>3</SPAN>点能量。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><SPAN style="mso-spacerun: yes"></SPAN><o:p></o:p></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">绝对零度——冰雪寒霜<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：重甲<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲基本属性：盔甲防御<SPAN 
-lang=EN-US>12/12</SPAN>，盔甲减值<SPAN lang=EN-US>3<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">盔甲特殊属性：【防弹】【防能量武器】<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">寒冰甲胄：穿戴者获得<SPAN 
-lang=EN-US>5</SPAN>点寒冰抗力。并且穿戴者进行的任何攻击检定，若成功命中，则额外造成<SPAN 
-lang=EN-US>1</SPAN>点寒冰伤害。同时造成等于额外伤害值的冻结点数，强韧豁免，该战甲造成的所有冻结点数每轮下降<SPAN 
-lang=EN-US>1</SPAN>点。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">雪地战术：穿戴者免疫雪地的困难地形。并且目标每有<SPAN 
-lang=EN-US>1</SPAN>点冻结点数，则其受到寒冰伤害时，伤害增加<SPAN lang=EN-US>1</SPAN>点<SPAN 
-lang=EN-US>.<o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">凝雪聚霜：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，向敌人射击出一发<SPAN 
-lang=EN-US>6L</SPAN>伤害的寒冰能量波，造成等额的冻结点数。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">极寒冰浪：消耗<SPAN 
-lang=EN-US>10</SPAN>点能量，以一个标准动作，放射一道宽<SPAN lang=EN-US>3</SPAN>米长<SPAN 
-lang=EN-US>20</SPAN>米的前进冰浪，造成<SPAN 
-lang=EN-US>10L</SPAN>寒冰伤害，并且冰浪冲击的范围视作困难地形。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">寒冰护罩：消耗<SPAN 
-lang=EN-US>5</SPAN>点能量，以一个反射动作，以自身为目标，制作一个球型冰罩保护自己不受外界攻击，冰罩有着独立的生命值与防御值，结构值为<SPAN 
-lang=EN-US>5</SPAN>点，装甲值为<SPAN 
-lang=EN-US>10</SPAN>。同一位置下冰罩可以无限施放，结构值会叠加计算，若一次以你为目标的单体攻击足以击溃球形冰罩，则你不会受到剩余伤害。受到范围伤害时，你与球形冰罩分别计算伤害。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">极冻雪崩：消耗<SPAN 
-lang=EN-US>25</SPAN>点能量，以一个整轮动作在<SPAN 
-lang=EN-US>15</SPAN>米范围内召唤出一场可怕的雪崩降临于敌人身上，被雪崩袭击的敌人将受到<SPAN 
-lang=EN-US>20L</SPAN>的寒冷伤害与等额<SPAN lang=EN-US>[</SPAN>冻结<SPAN 
-lang=EN-US>]</SPAN>效果，强韧豁免，每<SPAN lang=EN-US>1</SPAN>点成功降低<SPAN 
-lang=EN-US>1</SPAN>点伤害或者<SPAN lang=EN-US>1</SPAN>点冻结点数。 <SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>?<o:p></o:p></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-font-kerning: 0.0000pt; mso-spacerun: 'yes'"><FONT face=宋体><p>本质：特异本质</p>
+<p>价格：D+1000</p>
+<p>描述：距今几千年后的宇宙，一种神秘的病毒忽然间席卷了整个地球。幸存的人类发现，病毒已经将大部分人变为怪物。走投无路的人类设法离开地球并征服了太阳系，他们制造了一种半机械半AI的奥罗金来帮助仅存的人类维护统治，而在奥罗金时代后期爆发了一场几乎毁灭整个文明战争，当年的病毒再次归来，他们毁灭了大半个文明之时，部分幸存者将注意力转向了虚空，那个令一切科学和理性崩溃的地狱空间寻找可以对抗病毒的可能，而最终探险者在虚空中活着回来，并且获得了对抗病毒的强大的力量&mdash;&mdash;天诺。</p>
+<p>他们重新拾起最古老的武器：&lsquo;枪与剑&rsquo;，&lsquo;天诺&rsquo;变成了奥罗金的救世主，这些战神向摧毁他们家园的敌人倾泻无数金属洪流和怒火，力图重新恢复了宇宙的平衡。</p>
+<p>对于很多天诺的敌人和被拯救者来说，天诺是一个从虚空中再现的种族，但真相却并不那么惊人，他们只是一群重拾古老地球神秘科技的战士。</p>
+<p>在遥久的战斗中天诺战甲被不断的挖掘与创新，大型的不同偏向的战甲诞生于这无尽的战斗当中，战士们不再单一的穿着同一套战甲子而是在不断的任务对应使用铠甲，不同的战甲对应了相应的属性和独特的技能，改变身上的战甲就类似于改变了&ldquo;职业&rdquo;，战甲粗略可分为群体攻击型战甲、单体输出战甲、召唤型战甲、控制领域战甲、操控元素战甲、暗杀战甲和辅助战甲，每个战甲都配备3项专属技能与一项必杀技能，可以根据需要，随时更换不同的机甲去完成任务。</p>
+<p>特殊：如无特殊说明，在购买本改造技能树下所有能力时都必须先选择你当前已有的一件战甲，之后只有你选择的战甲才会获得对应的好处，但你可以为其他战甲再次购买该能力。</p>
+<p></p><p></p>
+<p>D级</p>
+<p>属性：无</p>
+<p>能量池：无</p>
+<p>技能树：开启D级星际战甲技能树</p>
+<p>特性：天诺战甲（七特性）</p>
+<p>特殊：由于开启技能树，所以减少1个特性；由于分数翻倍，额外获得1个特性；由于没有属性，额外获得2个特性；由于没有能量池，额外获得1个特性；由于是一次性改造，额外获得2个特性。</p>
+<p>天诺战甲：每件天诺战甲皆有一条能量槽，该能量槽不视作能量，并且仅能用来施展天诺战甲附带的能力，能量槽的上限为30，如无特殊说明，该能量槽仅能通过主神空间兑换列表内的大型能量电池进行补充，使用大型能量电池补充能量需要3个整轮动作，每枚电池能够提供30点能量，下列战甲所消耗的能量皆仅指本能量槽中的能量。</p>
+<p>特殊的，如果PC进入的影片背景合适，ST也可以允许PC在影片世界中自行寻找方法补充战甲的能量。</p>
+<p>所有的天诺战甲皆有自己的体积，并且具备【认主】特性。在接受本改造后，你的身体会被虚空能量改造，因此穿着和脱下天诺战甲只需一个整轮动作，同时在穿着天诺战甲时，无论你人物原本体积为多少，你的体积皆会变为天诺战甲本身的体积，这会带来数值上的变化，即使你的身体结构出现变化，你也可以如常穿着天诺装甲，这在画面效果上表现为你化作一道流光融入战甲内。</p>
+<p>人物在第一次购买本改造时可以从以下战甲挑选一件获得，之后能够以每件D+1000的价格购买其余战甲，每件战甲皆可重复购买，在获得战甲时你会同时开启该战甲对应的技能树。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>剑刃风暴-圣剑</p>
+<p>分类：轻甲</p>
+<p>体积：5</p>
+<p>描述：遗落于冥王星古老地层的基础型天诺战甲，传说在远古时代的地球，曾经有一位少女获得了&lsquo;圣剑&rsquo;从而获得了不死的肉体，近乎无敌的战力。</p>
+<p>盔甲基本属性：盔甲防御5/5</p>
+<p>盔甲特殊属性：【防弹】【防能量武器】</p>
+<p>显赫刀剑：你可以花费一个自由动作支付5点能量，随后你可以选择获得以下1项好处：</p>
+<p>1.使你当前持用的一把近战白刃武器的武器伤害提升2点并获得【能量武器】特性，若该武器已具备【能量武器】特性，则武器伤害再提升1点，持续1个场景或该武器离手为止。</p>
+<p>2.获得一把武器伤害6L，招式适应性为C级并具备【能量武器】特性的长剑，长剑会直接出现在你的手中，持续1个场景或该武器离手为止。</p>
+<p>电刃一闪：你可以支付3点能量并花费一个迅捷动作和标准动作移动最多不超过该12米的距离，之后对你触及范围内的一名单位以及与该单位邻接的敌人分别进行一次近战白刃攻击，在画面效果上表现为你以极快的速度进行了一次冲刺斩击。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>电闪雷霆-伏特<br />分类：轻甲<br />体积：5<br />描述：这就是Volt，一个多才多艺的战士。Volt的兵装是强大且充满电力的，小心使用，Tenno。<br />盔甲基本属性：盔甲防御3/3<br />盔甲特殊属性：【防弹】【防能量武器】移动闪电：你每累计主动移动100米的距离，便可获得1层&ldquo;电压&rdquo;，但如果你在1轮内没有主动移动过至少30米的距离，你便会立刻失去1层&ldquo;电压&rdquo;，你同一时间最多只能拥有10层&ldquo;电压&rdquo;，每次切换场景时&ldquo;电压&rdquo;都会自动清空。当你进行近战攻击时，只要你该次攻击命中目标，便会对目标额外造成等同于&ldquo;电压&rdquo;层数一半的雷电严重伤害。<br />连锁闪电：你可以花费标准动作支付7点能量，随后以敏捷+运动（能量射击）+&ldquo;电压&rdquo;层数检定对一名距离你不超过50米的单位进行一次远程攻击，造成雷电严重伤害，该次攻击获得【高速8】特性，并且伤害上限为&ldquo;电压&rdquo;层数*3+运动技能等级*2；此外，以该单位为中心半径15米内的敌人需要通过一个DC为你当前&ldquo;电压&rdquo;层数的反射检定，若检定未通过则会受到差值*1点雷电严重伤害，但目标在该次反射检定中需要承受等同于你该次攻击伤害值的无名减值。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>钢铁堡垒-狂野犀牛</p>
+<p>分类：重甲</p>
+<p>体积：5</p>
+<p>描述：Rhino 是一台重装甲战甲，如名字&ldquo;犀牛&rdquo;所示，拥有强大的力量和坚固的防御。Rhino牺牲速度换取力量，被设计为队伍中的坦克职位，他能冲锋在前线，吸引敌人火力，用蛮力支配战局。</p>
+<p>盔甲基本属性：盔甲防御6/6，盔甲减值2</p>
+<p>盔甲特殊属性：【防弹】【防能量武器】</p>
+<p>不动如山：穿戴者的生命值上限提升3点。</p>
+<p>高空坠落：当你从高空坠落时，你可以对以你为中心半径6米范围内的敌人造成等同于该次坠落米数/3点坠落冲击伤害（受到坠落伤害上限影响），敌人以反射豁免，这无需动作；此外，受影响的单位还需要通过一个力量+运动（平衡感）检定，DC为其该次所受的伤害，若其检定未通过则会立刻倒地。</p>
+<p>犀牛冲锋：你可以花费整轮动作支付5点能量并进行一次冲锋攻击，在这次冲锋攻击中，你能够闯越任意体积的目标，同时每个被你成功闯跃的目标必须以敏捷或力量检定（具体由目标选择）与你的力量检定进行对抗，若目标对抗失败，则会立刻被击倒。</p>
+<p>铁骨钢筋：你可以花费反射动作支付5点能量，随后使自身获得6点临时生命，持续一个场景，本能力在同一场景内可重复施展，但同一时间你能通过本能力获得的临时生命上限为6点。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>炼狱焚尘-永恒烈焰</p>
+<p>分类：轻甲</p>
+<p>体积：5</p>
+<p>描述：Ember是一个以火焰技能为主的战甲，高爆发、大范围、强控制的范围技能，让她可以在战场上输出毁灭性的伤害，但由于缺乏有效的自我保护能力，因此在使用时需要小心。</p>
+<p>盔甲基本属性：盔甲防御3/3</p>
+<p>盔甲特殊属性：【防弹】【防能量武器】</p>
+<p>火焰充能：你每轮行动开始时都会恢复等同于你当前身上所具备的燃烧点数*1点能量，并且在施展本战甲其他能力（包括技能树下的能力）时，你在相关检定上获得等额的能量加值，透过此法获得的能量加值上限不得超过战甲能量槽上限的一半。</p>
+<p>豪炎火球：你可以花费标准动作支付7点能量，随后以敏捷+运动（能量射击）检定对一名距离你不超过50米的单位进行一次远程攻击，造成火焰严重伤害，该次攻击攻击获得【高速8】特性，并且伤害上限为你的敏捷+运动技能等级；此外，以该单位为中心半径15米内的敌人需要通过一个DC为你运动技能等级的反射检定，若检定未通过则会受到差值的火焰严重伤害。</p>
+<p>加速燃烧：你可以花费迅捷动作支付3点能量，随后使以为你中心半径20米范围内的敌人获得1层&ldquo;助燃&rdquo;层数，每名单位最多只能拥有5层&ldquo;助燃&rdquo;，其每次受到火焰伤害时，该伤害都会额外造成等同于&ldquo;助燃&rdquo;层数*1点，提升的伤害不计入伤害上限中，&ldquo;助燃&rdquo;层数持续5轮，每次获得新的层数时都会重置持续时间。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>绝对零度-冰雪寒霜</p>
+<p>分类：重甲</p>
+<p>体积：5</p>
+<p>描述：Frost 是一个以冰霜为主题的战甲。尽管Frost给人以慢速、重装甲的印象，但他却攻守兼备，既能操纵暴风雪打击、冻结敌人，也可以创造冰霜护罩，保护队友免受伤害。</p>
+<p>盔甲基本属性：盔甲防御6/6，盔甲减值2</p>
+<p>盔甲特殊属性：【防弹】【防能量武器】</p>
+<p>急冻：任何单位每次对你进行近战攻击时，只要该次攻击成功命中你，攻击方就会受到不可豁免且可叠加的2点冻结点数，由本能力造成的冻结点数在目标每轮行动结束时自动降低1点。</p>
+<p>凝雪聚霜：你可以花费标准动作支付5点能量，随后以敏捷+运动（能量射击）检定对一名距离你不超过50米的单位进行一次远程攻击，造成寒冰严重伤害，该次攻击攻击获得【高速8】特性，并且伤害上限为你的敏捷+运动技能等级；此外，该次攻击还会对目标造成2点冻结点数，该冻结点数不可豁免，可叠加，本能力造成的冻结点数在目标每轮行动结束时自动降低1点，若目标身上有&ldquo;急冻&rdquo;造成的冻结点数，则总计会降低1点。</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>星际战甲通用技能树：</p>
+<p></p><p></p>
+<p>战甲性能提升</p>
+<p>价格：D+1000</p>
+<p>动作：被动</p>
+<p>描述：有别于一般的铠甲，天诺战甲因需要面对上致太空下致地核的高强度任务，因此它拥有着海量的扩展性。</p>
+<p>效果：本能力可重复购买，每次购买都可以选择你当前拥有的一件战甲并使其以下一项对应的好处。针对同一件战甲，每项好处只能获得一次：</p>
+<p>1.战甲获得【三防】，并且盔甲防御提升3点，同时穿戴者获得黑暗视觉且能够忽略困难地形带来的影响。</p>
+<p>2.穿戴者获得1点全伤害吸收，同时生命值上限提升3点。</p>
+<p>3.战甲获得【封闭2】，同时可以在真空，水下等环境提供空气，空气自循环，无需补充。</p>
+<p>4.战甲能量槽上限提升20点。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>圣剑战甲技能树：</p>
+<p></p><p></p>
+<p>折光致盲</p>
+<p>价格：D+500</p>
+<p>动作：标准动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：立即</p>
+<p>描述：释放一阵明亮的闪光，数秒内使小范围敌人失明。</p>
+<p>效果：你进行一次近战白刃攻击检定，对范围内所有敌人造成等同于你该次检定成功数的目眩点数，上限为你的白刃攻击伤害上限，目标强韧豁免，不可叠加。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>凌光标枪</p>
+<p>价格：D+500</p>
+<p>动作：整轮动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：立即</p>
+<p>描述：你在敌人身边召唤出一支标枪。随后，只要你将自己的武器插在地上，标枪就会向目标发射，标枪外观上和能量化的刀刃相似。</p>
+<p>效果：你进行一次近战白刃攻击检定，对范围内所有敌人造成等同于你该次检定成功数的物理严重伤害，反射豁免，受影响的目标还需要通过一个DC为其该次所受伤害的强韧检定，若检定未通过则会受到差值的晕眩点数，该晕眩点数不可叠加，并且在目标每轮行动开始时都会自动降低1点。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>伏特战甲技能树：</p>
+<p></p><p></p>
+<p>静电释放</p>
+<p>价格：D+500</p>
+<p>动作：被动</p>
+<p>描述：只要Volt在地面上移动，他就能为下一次攻击积蓄电击伤害。</p>
+<p>效果：现在你切换场景时不会再清空&ldquo;电压&rdquo;层数，并且改为每累计移动50米便可获得1层&ldquo;电压&rdquo;。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>疾风迅雷</p>
+<p>价格：D+500</p>
+<p>动作：迅捷动作</p>
+<p>能耗：3点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有友方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：1轮</p>
+<p>描述：获得一段时间的移动速度增幅，并设置一具加速线圈以提供盟友使用的相同能力。</p>
+<p>效果：范围内所有友方目标在效果持续期间进行第一次移动时可移动的距离提升1倍，其移动结束后本效果会立刻结束。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>岚盾护体</p>
+<p>价格：D+500</p>
+<p>动作：反射动作</p>
+<p>能耗：3点能量</p>
+<p>射程：接触</p>
+<p>目标：无</p>
+<p>范围：无</p>
+<p>持续：5轮</p>
+<p>描述：Volt展开一道能量屏障，在任何情况皆能提供掩护。</p>
+<p>效果：你在射程范围内释放一个体积为8的力场屏障，该屏障持续5轮，你同一时间只能释放一个力场屏障，新的力场屏障会取代旧的屏障。屏障没有实体也无法移动，并且不会受到任何影响，与该护盾邻接的友方目标会在防御上获得4点掩蔽加值；此外，友方目标在进行远程攻击时，若该次攻击会先穿过力场屏障，则该次攻击增加3点【高速】。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>电闪雷鸣</p>
+<p>价格：D+1000</p>
+<p>动作：标准动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径20米的范围</p>
+<p>持续：3轮</p>
+<p>描述：用伤害性的电能释放麻痹附近的敌人,也会电击靠近的敌人。</p>
+<p>效果：你记录你当前的&ldquo;电压&rdquo;层数，之后在以你为中心半径20米的范围内制造一个圆形能量场，该能量场持续3轮，不会跟随你移动。</p>
+<p>所有位于该能量场内的敌人在其每轮行动开始时，都会受到等同于你施放该能量场时拥有的&ldquo;电压&rdquo;层数+5点雷电严重伤害和等额的麻痹点数，目标分别以反射检定豁免伤害，以强韧检定豁免麻痹点数。</p>
+<p>你同一时间只能释放一个能量场，新的能量场会取代旧的能量场。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>狂野犀牛战甲技能树：</p>
+<p></p><p></p>
+<p>超级防护</p>
+<p>价格：D+1000</p>
+<p>动作：被动</p>
+<p>描述：这就是Rhino，一个不可移动的力量和高度的弹性。</p>
+<p>Rhino既可以独自生存又可成为队伍中的基石，Tenno。取决于你。</p>
+<p>效果：穿戴者获得1点全伤害吸收，可以与&ldquo;战甲性能提升&rdquo;叠加，同时生命值上限提升3点。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>征战号角</p>
+<p>价格：D+500</p>
+<p>动作：移动动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有友方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：5轮</p>
+<p>描述：Rhino发出一声强力战吼，增加其周围友军的伤害。</p>
+<p>效果：范围内所有友方单位在效果持续期间在攻击检定上获得2个附加成功与4点士气加值。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>犀牛践踏</p>
+<p>价格：D+500</p>
+<p>动作：标准动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：立即</p>
+<p>描述：Rhino的强力践踏可以扰乱时间秩序，让周围的敌人锁定在时间中。</p>
+<p>效果：你进行一次力量+运动检定，对范围内所有处于地面上的敌人造成等同于该次检定成功数的物理严重伤害，反射豁免，若目标所受的伤害高于其体积，则目标会立刻倒地，并且直到你下轮行动开始前，目标都无法主动站起；此外，受影响单位还需要通过一次DC为其该次所受伤害的反射检定，若检定未通过则会受到差值一半的纠缠点数。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>永恒烈焰战甲技能树：</p>
+<p></p><p></p>
+<p>惊惧热浪</p>
+<p>价格：D+1000</p>
+<p>动作：整轮动作</p>
+<p>能耗：7点能量</p>
+<p>射程：接触</p>
+<p>目标：见下</p>
+<p>范围：见下</p>
+<p>持续：见下</p>
+<p>描述：Ember对地面重击，产生出一个向外扩散至半径15米的爆炎，接触到爆炎的敌人会着火并被击退。随后该地点会形成一个火圈，进入火圈的敌人会受到火焰伤害。</p>
+<p>效果：你选择范围内的一点并进行一次近战攻击检定，随后对以该点为中心半径15米范围内的敌人造成等同于你该次检定成功数的火焰严重伤害，反射豁免。若目标受到伤害，则再进行一次反射豁免，DC为其该次所受伤害的反射检定，若检定未通过则会承受差值一半的燃烧点数并被击退等额的米数。</p>
+<p>随后，以该点为中心半径4米的范围内会生成一个火圈，位于该范围内的敌人在其每轮行动开始时都会立刻受到等同于其身上燃烧点数的火焰严重伤害，反射豁免，火圈持续时间为3轮。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>无尽火海</p>
+<p>价格：D+1000</p>
+<p>动作：整轮动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径25米的范围</p>
+<p>持续：见下</p>
+<p>描述：Ember用手重击地面，对范围内的敌人造成火焰伤害，并引发一系列的爆炸。</p>
+<p>效果：施展本能力后，你每轮都可以花费一个标准动作专注维持本能力，在本能力持续期间，你每轮行动结束时都会对范围内所有敌人造成6点火焰严重伤害与等额的燃烧点数，目标分别以反射豁免，你每维持本能力1轮，本能力造成的伤害与燃烧点数便会提升1点，在维持本能力期间，你每轮行动结束时都需要为此支付已维持的轮数*2点能量（第二轮2点，第三轮4点）。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>冰雪寒霜战甲技能树：</p>
+<p></p><p></p>
+<p>极寒冰浪</p>
+<p>价格：D+1000</p>
+<p>动作：标准动作</p>
+<p>能耗：5点能量</p>
+<p>射程：见下</p>
+<p>目标：所有敌方目标</p>
+<p>范围：见下</p>
+<p>持续：立即</p>
+<p>描述：送出由冰形成的锋利浪潮，对敌人造成强烈伤害。</p>
+<p>效果：你选择一个方向并进行一次敏捷+运动（能量射击）检定，随后你对该方向半径20米的120度锥形范围内所有敌人造成等同于你该次检定成功数的寒冰严重伤害，目标以反射豁免，随后目标还需要通过一个DC为其该次所受伤害的强韧检定，若检定未通过则需要承受差值一半的冻结点数。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>寒冰护罩</p>
+<p>价格：D+1000</p>
+<p>动作：反射动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以自身为中心</p>
+<p>目标：自身</p>
+<p>范围：半径5米的范围</p>
+<p>持续：1轮</p>
+<p>描述：Frost深度冻结区域内所有水汽和水分，建立一个防护性的球体。</p>
+<p>效果：你制造一个冰罩，冰罩不会跟随你移动，但其范围内所有敌人的基础移动速度会降低10米。</p>
+<p>冰罩有着独立的生命值与防御值，其结构值为5点，装甲值为10，当你位于冰罩内时，所有针对你的远程攻击必须先针对冰罩进行一次攻击，在摧毁冰罩后才能如同其该次攻击具备【贯穿】特性一般对你进行攻击，若其该次攻击未能摧毁冰罩，则无法对你进行攻击。</p>
+<p>你在同一时间能够施放多个冰罩，若多个冰罩中心点相同，则其结构值叠加计算。</p>
+<p>冰罩会如常受到范围伤害所影响，并且其无法针对范围伤害进行豁免。</p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p>极冻雪崩</p>
+<p>价格：D+1000</p>
+<p>动作：整轮动作</p>
+<p>能耗：5点能量</p>
+<p>射程：以你为中心</p>
+<p>目标：所有敌方目标</p>
+<p>范围：半径15米的范围</p>
+<p>持续：见下</p>
+<p>描述：召唤一个雪崩，立刻冻结并粉碎半径内所有敌人。</p>
+<p>效果：你进行一次敏捷+运动（能量射击）检定，随后你对范围内所有敌人造成等同于你该次检定成功数的严重伤害，目标以反射豁免，该次伤害中一半为寒冰严重伤害，另一半为物理严重伤害，随后目标在防御上的盔甲加值会减少等同于你运动技能等级*1点，持续2轮，不可叠加，重复获得会刷新持续时间；同时，目标还需要通过一个DC为其该次所受伤害的强韧检定，若检定未通过则需要承受差值一半的冻结点数。</p>
+<p></p>
+<p></p> 
+</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'"></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

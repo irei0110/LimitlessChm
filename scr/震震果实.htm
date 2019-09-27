@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(296);
+  parent.nav.tree.selectNode(286);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,189 +179,41 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="New_Item181.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="幽灵果实1.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage13.htm">恶魔果实</A> &gt; </div>
-<div id="winchm_template_title">震震果实</div>
-<div id="winchm_template_content">
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">“<SPAN 
-lang=EN-US>ONE PIECE</SPAN>！是真实存在的！”<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">世界最强的男人，白胡子所使用的果实<SPAN 
-lang=EN-US>.</SPAN>可以随意引发震动，全力发动时足以让大地，海洋，甚至天空碎裂的强大果实<SPAN 
-lang=EN-US>.</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>D</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">级<SPAN 
-lang=EN-US> D+1000</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震武：当你发动近战攻击时，若成功命中，则你可以额外产生一次震击，对目标额外造成相当于你力量附加成功数的冲击伤害。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">地震：你可以以一个标准动作，以自身为中心，耐力<SPAN 
-lang=EN-US>/</SPAN>米为半径发动一次震动，你进行力量检定，对范围内所有目标造成等于成功数的冲击伤害，目标反射豁免，若目标受到<SPAN 
-lang=EN-US>1</SPAN>点伤害，则倒地。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>C</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">级<SPAN 
-lang=EN-US> C+2000</SPAN>或<SPAN lang=EN-US>16XP</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">地震：你现在地震造成的伤害为严重伤害，范围扩大至耐力<SPAN 
-lang=EN-US>/5</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震武：你现在额外产生的震击伤害变为严重伤害，并且额外伤害变为你力量值<SPAN 
-lang=EN-US>/4</SPAN>。同时，若你攻击时，未命中该目标，则依然可以发动震击，但是目标可以反射豁免，但这并不是一个远程攻击手段。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>B</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">级<SPAN 
-lang=EN-US> B+4000</SPAN>或<SPAN lang=EN-US>32XP</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震武：你现在的额外伤害变为你力量值<SPAN 
-lang=EN-US>/3</SPAN>。并且你的近战攻击中的破甲获得提升，提升的数值相当于你的武器伤害。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震荡攻击：当你发动震武时，无论是否命中都可以选择变为范围伤害，范围为你的耐力<SPAN 
-lang=EN-US>/</SPAN>米，你自己不受伤害影响，范围内所有目标受到相当于震武额外伤害的范围伤害，反射豁免。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">强力震荡：你可以将震荡波凝聚在武器上以达到远程攻击的效果，攻击距离可以增加力量<SPAN 
-lang=EN-US>/10</SPAN>米，以此方法攻击仍可以附带武器的全部效果，但是这种方法无法发动震武<SPAN 
-lang=EN-US>.</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">地震：你现在地震的范围扩大至耐力<SPAN 
-lang=EN-US>/10</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>A</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">级<SPAN 
-lang=EN-US> A+8000</SPAN>或<SPAN lang=EN-US>64XP</SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">地震：你现在地震的范围扩大至耐力<SPAN 
-lang=EN-US>/100</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震武：你现在的额外伤害变为你力量值<SPAN 
-lang=EN-US>/2</SPAN>。并且额外伤害中相当于你力量附加成功数部分的伤害提升为恶性伤害。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">强力震荡：攻击距离扩大为力量<SPAN 
-lang=EN-US>/10</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震荡攻击：范围扩大为耐力<SPAN 
-lang=EN-US>/10</SPAN>米，并且发动强力震荡时也可以使用本能力。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">空震：当你发动强力震荡和震武效果时，你可以发动本能力，你的武器发出白光，攻击时触发点为中心会出现明显的黑色裂痕<SPAN 
-lang=EN-US>.</SPAN>使用空震可以无视目标你力量附加成功数的伤害减免能力。<SPAN 
-lang=EN-US></SPAN></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="幽灵果实.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="荷尔蒙果实.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage31.htm">特异本质改造</A> &gt; <A href="$$unsavedpage33.htm">恶魔果实</A> &gt; <A href="$$unsavedpage35.htm">超人系</A> &gt; </div>
+	<div id="winchm_template_title">震震果实</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>震震果实</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>（超人系</FONT>-超能力）</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：A+4000</p>
+<p>技能树：无</p>
+<p>特性：震！（三特性），环境巨变（双特性），空碎（双特性），震开</p>
+<p>特殊：由于没有属性，技能树和一次性改造，额外获得5个特性。</p>
+<p>描述：&ldquo;ONE PIECE！是真实存在的！&rdquo;</p>
+<p>世界最强的男人，白胡子所使用的果实.可以随意引发震动，全力发动时足以让大地，海洋，甚至天空碎裂的强大果实.</p>
+<p>震！：你现在获得一种新的能力，可以引发物体的震动，造成毁天灭地的效果，你可以使用以下方法使用本能力：</p>
+<p>你可以将本能力凝聚在自己的实体武器攻击中，若如此做，你的本次攻击的伤害类型变为力场伤害，武器伤害提升X点，并且可以造成远程攻击，最大射程为X*100米，破甲增加X点，并且相当于X点的伤害提升为恶性伤害。</p>
+<p>环境巨变：你可以使用本能力造成巨大的环境影响，制造地震，海啸，分裂大地和海面，引发火山爆发这些环境效果，可改变的最大射程为X*100米，范围为X*50米的半径。</p>
+<p>空碎：你可以以一个标准动作，以力量/敏捷取高+肉搏作为远程接触攻击检定，射程为耐力*10米，若成功命中目标，则对目标造成相当于X*2的力场恶性伤害。</p>
+<p>震开：当你受到物理伤害时，你可以以震动来化解本次伤害，你可以抵消相当于X点物理伤害。</p>
+<p></p><p></p>
+<p><br />说明：X为你的传奇耐力+自身最高支线等级。</p>
+<p><br />你可以通过以下方法增加X。</p>
+<p>每花费8XP，则X增加1点。</p></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

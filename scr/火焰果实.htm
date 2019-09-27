@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(293);
+  parent.nav.tree.selectNode(277);
  }else{
   setTimeout("syn()",500);
 }
@@ -132,7 +169,7 @@ if(parent.nav.tree){
 if(parent!=self){
   setTimeout("syn()",100);
 }else{
-  parent.location.href = "../index.htm?page=New_Item176.htm";
+  parent.location.href = "../index.htm?page=火焰果实1.htm";
 }
 originalOnload = window.onload;
 if(originalOnload==null){
@@ -142,334 +179,174 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="New_Item183.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="荷尔蒙果实.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage13.htm">恶魔果实</A> &gt; </div>
-<div id="winchm_template_title">火焰果实</div>
-<div id="winchm_template_content">
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳艾斯拥有的果实，吃下此果实后，可以丢出火焰弹或将身体化为火焰进行攻击，威力逐渐提升，消耗体能，需要大量进食补充。火焰果实造成的火焰伤害不计入伤害上限。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>D<SPAN 
-style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>1000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">　　<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳：你现在双手可以化为火焰，进行近战双拳的肉搏攻击时，双拳可以视为<SPAN 
-lang=EN-US>1L</SPAN>的天生武器，视为造成火焰伤害，突破相应的<SPAN 
-lang=EN-US>DR</SPAN>与伤害吸收，但会被能量抗力抵消。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火焰化身：并且你免疫自身的火焰。启动果实能力是一个整轮动作。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>C<SPAN 
-style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>2000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">或<SPAN 
-lang=EN-US>16XP</SPAN>　<SPAN lang=EN-US> </SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳：你现在整条手臂都可以化为火焰，双拳的威力提升至<SPAN 
-lang=EN-US>3L</SPAN>，并且附带【灼烧】效果。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火焰化身：主动启动能力时候获得<SPAN 
-lang=EN-US>1DR/</SPAN>魔法 神器，并获得<SPAN lang=EN-US>2</SPAN>点火焰抗力。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">十字火：你可以将你制造的火焰当做投掷武器，丢出的火焰可视为伤害为<SPAN 
-lang=EN-US>2L</SPAN>的远程投掷武器，额外造成<SPAN 
-lang=EN-US>1</SPAN>点火焰自动成功。启动果实能力是一个标准动作。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>B<SPAN 
-style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>4000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">或<SPAN 
-lang=EN-US>32XP</SPAN>　<SPAN lang=EN-US> </SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳：你现在半条身体都可以化为火焰，你的天生武器的威力提升至<SPAN 
-lang=EN-US>5L</SPAN>，现在你所有的近战肉搏攻击都可以造成火焰伤害，以及附带【灼烧】效果。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火焰化身：在主动启动能力的时候获得<SPAN 
-lang=EN-US>DR2/</SPAN>魔法 神器，并获得<SPAN lang=EN-US>4</SPAN>点火焰抗力<SPAN 
-lang=EN-US>,</SPAN>。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">十字火：你投掷的火焰伤害视为<SPAN 
-lang=EN-US>4L</SPAN>的远程投掷武器，额外造成<SPAN 
-lang=EN-US>2</SPAN>点火焰自动成功。启动果实能力是一个移动动作。<SPAN lang=EN-US> 
-</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火枪：你也可以将你的火焰通过两根手指不停交错，发射小型的火球。这些火球视为<SPAN 
-lang=EN-US>2L</SPAN>的投掷武器，可以享受【扫射】带来的好处。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>A<SPAN 
-style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>8000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">或<SPAN 
-lang=EN-US>64XP </SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你现在全身都可以化为火焰，并且可以通过热力对四周空气密度的改变漂浮在空中，丢出更大的火焰团或者将手脚化为巨大的火焰攻击。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳：你的天生武器的威力提升至<SPAN 
-lang=EN-US>8L</SPAN>，并且火焰使你的攻击范围扩大，扩大的范围为你的耐力的附加成功书<SPAN 
-lang=EN-US>/</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火焰化身：你在主动启动能力的时候获得<SPAN 
-lang=EN-US>DR5/</SPAN>魔法 神奇，并获得<SPAN lang=EN-US>6</SPAN>点火焰抗力。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">十字火：你现在投掷的火焰视为<SPAN 
-lang=EN-US>6L</SPAN>的远程投掷武器，额外造成<SPAN lang=EN-US>4</SPAN>点火焰自动成功。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">额外获得飞行能力，机动性笨拙，获得陆地基础速度一半的飞行速度，额外获得悬浮效果。启动果实能力是一个迅捷动作。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>AA 
-12000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">或<SPAN 
-lang=EN-US>96XP<SPAN style="mso-spacerun: yes">&nbsp; 
-</SPAN></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你现在就是火焰的化身。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火拳：你的天生武器提升至<SPAN 
-lang=EN-US>10L</SPAN>，并且攻击范围扩大为你的耐力<SPAN lang=EN-US>/</SPAN>米。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">火焰化身：你现在主动启动时获得<SPAN 
-lang=EN-US>DR</SPAN>转化为全伤害吸收。获得<SPAN lang=EN-US>8</SPAN>点火焰抗力。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">炎帝：你投掷的火焰视为<SPAN 
-lang=EN-US>8L</SPAN>的远程投掷武器，你可以通过蓄力来增加它的威力，每蓄力一整轮，该火焰伤害提升<SPAN 
-lang=EN-US>2L</SPAN>。你也可以将他作为范围武器，爆炸的范围为你的耐力值的附加成功<SPAN 
-lang=EN-US>/</SPAN>米。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你现在的飞行能力提升为良好，可以用基础陆地速度飞行。启动果实是一个自由动作。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">注：当你佩戴任何阻止你的拳头与对手身体相接触的武器以及类似物品的时候，无法发动火拳能力。如果强制发动，会优先破坏掉自己覆盖在双拳上的武器或者物品。<SPAN 
-lang=EN-US></SPAN></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="沙之果实1.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="熔岩果实1.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage31.htm">特异本质改造</A> &gt; <A href="$$unsavedpage33.htm">恶魔果实</A> &gt; <A href="$$unsavedpage34.htm">自然系</A> &gt; </div>
+	<div id="winchm_template_title">火焰果实</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火焰果实</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>（自然系）</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：</FONT>A+4000</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>描述：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火拳艾斯拥有的果实，吃下此果实后，可以丢出火焰弹或将身体化为火焰进行攻击，威力逐渐提升，消耗体能，需要大量进食补充。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>特性：火焰免疫（四特性），火拳（三特性）</FONT></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">技能树：开启火焰果实技能树</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>特殊：由于没有属性和一次性改造，额外获得</FONT>4个特性。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火焰免疫：你免疫火焰伤害和高温环境减值和环境效果，你免疫燃烧点数。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火拳：你现在使用天生武器或者近战白刃武器进行攻击可以造成火焰伤害，若成功命中，则造成相当于造成伤害数的燃烧点数，强韧豁免，可以叠加。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>修炼：无需逐级修炼</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火达摩：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px">16XP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>以一个标准动作，召唤出相当于力量附加成功数与你耐力附加成功数之和的小火苗。你以力量</FONT>/敏捷取高+运动进行一次远程接触攻击检定，基本射程为10米，你可以选择分配你的火苗，若你分配的火苗超过1个目标，则需要分别检定。若成功命中，则目标受到相当于分配数的火焰严重伤害，并且受到等额的燃烧点数，可叠加，无法豁免。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>十字火：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：</FONT>16XP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>以一个标准动作，你可以丢出相当于你天生武器伤害的火球，基础射程</FONT>10米，最大射程用耐力而非力量，攻击检定为力量+运动（轻投掷武器），本次攻击造成火焰严重伤害，若成功造成伤害，则成相当于造成伤害数的燃烧点数，强韧豁免，可以叠加。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>火拳：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px">24XP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>被动</FONT>-你现在使用天生武器进行的肉搏攻击触及范围扩大为你的耐力*5米。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN>&nbsp;</P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>大炎戒</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px">·炎帝</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>价格：</FONT>64XP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>整轮动作启动，花费</FONT>3点意志力，你可以制造一个巨大的火球。火球伤害为你力量附加成功与耐力附加成功之和，其体积等于其伤害。你可以花费标准动作，以敏捷/力量+运动将其投掷出去，其基本射程等于你的耐力值/米。命中后炎帝将产生爆炸，对其体积*10米范围内的所有目标造成等于炎帝伤害的火焰恶性伤害，反射豁免，你的检定每有1点成功数，则目标的反射豁免失去1DP。目标反射豁免每有1点成功数，则可以将1点伤害下降1级。同时，目标每受到1点火焰伤害，则目标受到1点燃烧点数，无豁免，可叠加。</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: Calibri"></SPAN></P>
+<P class=MsoNormal 
+style="FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; MARGIN: 0pt; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 22px; TEXT-INDENT: 0pt; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px" 
+Align=left><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 24px"><FONT face=宋体>增幅：你额外对炎帝进行蓄力，蓄力是一个标准动作，每蓄力一次，炎帝的伤害提升相当于你力量附加成功数与耐力附加成功数之和，最大不得超过你的力量值或者耐力值取低。炎帝最多存在你的决心值</FONT>/轮。</SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

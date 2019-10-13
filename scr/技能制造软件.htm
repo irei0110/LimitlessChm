@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(245);
+  parent.nav.tree.selectNode(332);
  }else{
   setTimeout("syn()",500);
 }
@@ -132,7 +169,7 @@ if(parent.nav.tree){
 if(parent!=self){
   setTimeout("syn()",100);
 }else{
-  parent.location.href = "../index.htm?page=New_Item202.htm";
+  parent.location.href = "../index.htm?page=技能制造软件.htm";
 }
 originalOnload = window.onload;
 if(originalOnload==null){
@@ -142,545 +179,308 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="New_Item161.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="机装少女改造.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage11.htm">科技类改造</A> &gt; </div>
-<div id="winchm_template_title">技能制造软件</div>
-<div id="winchm_template_content">
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">简称<SPAN 
-lang=EN-US>AP</SPAN>。用于开发立华奏的各个技能。将技能转为二进制之后在转化或转换为实体，并且可以进行攻击、防守或者是回避等。简单说之，就是可以控制这个世界并且制造出人物状态和技能的软件。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特殊：使用<SPAN 
-lang=EN-US>AP</SPAN>软件需要用口语命令，你必须用清晰的语音念出指令才能调用<SPAN lang=EN-US>AP</SPAN>技能。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>D+600</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">入门级 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">天使的技能全部是由<SPAN 
-lang=EN-US>Angel Player(</SPAN>简称<SPAN 
-lang=EN-US>AP)</SPAN>的软件所创造出来的，天使能够直接通过“口语命令”使自身“二进制化”（或“拥有能力”）通过入门级改造可以简单应用其中的技艺。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">其中应用了大量二进制编程语言，你的电脑提升一级（最多到<SPAN 
-lang=EN-US>4</SPAN>）获得一个专业（二进制）。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">如果你有电脑<SPAN 
-lang=EN-US>4</SPAN>，科学<SPAN lang=EN-US>4</SPAN>，并且各拥有至少一个专业，你可以在自创<SPAN 
-lang=EN-US>AngelPlayer</SPAN>技能时，每个技能减免<SPAN lang=EN-US>1XP</SPAN>。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你获得<SPAN 
-lang=EN-US>D</SPAN>级<SPAN lang=EN-US>Angel Player</SPAN>技能中的<SPAN 
-lang=EN-US>Handsonic </SPAN>“音速手刃”。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>C+1200</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">应用级 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>AP</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">的专业型电脑辅助系统可以将二进制化虚拟至你的身体周边，形成一种类似立场的防护，但实际上这是将你身边的数据流二进制化然后改写的效果。<SPAN 
-lang=EN-US>C</SPAN>级<SPAN lang=EN-US>AP</SPAN>为你提供了<SPAN 
-lang=EN-US>1</SPAN>点全伤害吸收，并且在电脑及科学上提升<SPAN lang=EN-US>1</SPAN>级（最多到<SPAN 
-lang=EN-US>6</SPAN>）。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你获得<SPAN 
-lang=EN-US>C</SPAN>级<SPAN lang=EN-US>AP</SPAN>技能中的<SPAN lang=EN-US>Handsonic 
-Version2 </SPAN>“音速手刃 形态<SPAN lang=EN-US>2</SPAN>” <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>B+3000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">专业级 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">达到专业级的<SPAN 
-lang=EN-US>AP</SPAN>软件除了可以影响你自身，也可以影响你一定范围内的环境。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">对二进制流的转化能力使你的全伤害吸收提升到<SPAN 
-lang=EN-US>3</SPAN>。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">并且在科学及电脑上提升<SPAN 
-lang=EN-US>1</SPAN>级（最多到<SPAN lang=EN-US>8</SPAN>），且你的电脑和科学检定加骰提升一级，最高到<SPAN 
-lang=EN-US>8</SPAN>。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你可以选择并获得<SPAN 
-lang=EN-US>B</SPAN>级<SPAN lang=EN-US>AP</SPAN>技能中的<SPAN lang=EN-US>Handsonic 
-Version5 </SPAN>“音速手刃 形态<SPAN lang=EN-US> 5</SPAN>”、<SPAN lang=EN-US>Handsonic 
-Version3 </SPAN>“音速手刃 形态<SPAN lang=EN-US> 3</SPAN>”之一。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>A+10000</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">创世级 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">在科学及电脑上提升<SPAN 
-lang=EN-US>1</SPAN>级。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">创世级的<SPAN 
-lang=EN-US>AP</SPAN>能力将整体的数据流转化应用到世界级范畴。你甚至可以将自身整体数据化一瞬间。你的全伤害吸收提升到<SPAN 
-lang=EN-US>8</SPAN>点。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你可以使自身彻底数据流化来完全避免一次单体攻击。开启数据流化是一个反射动作，并且需要消耗<SPAN 
-lang=EN-US>1</SPAN>点意志，每场景限使用一次，每部影片总次数为你在电脑技能和科学技能上的附加成功数之和。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">由于数据流化需要传导介质的存在，你在每次使用数据流时可以立刻移动不超过你智力数值的距离，这个距离必须是直线距离，而且无视中间遮挡。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>Angel 
-Player</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">技能树： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>D</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>D+500</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>Handsonic </SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">“音速手刃”，在手背处形成短剑可用与攻击与格挡。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">音速手刃<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：特异本质<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：短剑<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">武器基本属性：武器伤害<SPAN 
-lang=EN-US>5L</SPAN>，破甲<SPAN lang=EN-US>1</SPAN>，破魔<SPAN 
-lang=EN-US>1</SPAN>，【<SPAN lang=EN-US>9</SPAN>加骰】<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">武器特殊属性：无<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震荡：使用本武器攻击时额外忽略<SPAN 
-lang=EN-US>5</SPAN>点硬度。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">创造：这把武器是你自己制造的，制造本武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的“音速手刃”。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">灵巧：你在使用手刀时，可以用敏捷代替力量进行判定。本特性对于全部手刀系列都生效。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal> 
-</SPAN>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>
-<P></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>D+500 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>Distortion</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“扭曲力场” <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">将指向自己靠惯性运动的运动物体发生偏转改变其运动路径。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">使用一个标准动作启动扭曲力场，在对抗范围伤害时获得<SPAN 
-lang=EN-US>+4dp</SPAN>的力场加值。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">扭曲力场可以持续存在一个场景。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>C</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>&nbsp; 
-</SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>C+1500 </SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>Handsonic Version2 </SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">“音速手刃形态<SPAN 
-lang=EN-US>2</SPAN>”，<SPAN lang=EN-US>Hand sonic</SPAN>的加强版，<SPAN 
-lang=EN-US>V2</SPAN>是强化了高速性能的超薄型态。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">音速手刃形态<SPAN 
-lang=EN-US>2</SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：特异本质<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：短剑<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">武器基本属性：武器伤害<SPAN 
-lang=EN-US>8L</SPAN>，破甲<SPAN lang=EN-US>2</SPAN>，破魔<SPAN 
-lang=EN-US>2</SPAN>，【<SPAN lang=EN-US>9</SPAN>加骰】<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震荡：使用本武器攻击时额外忽略<SPAN 
-lang=EN-US>5</SPAN>点硬度。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">创造：这把武器是你自己制造的，将“音速手刃”进化成本武器是一个迅捷动作，必须在你召唤出“音速手刃”时才可以进化成该武器，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的“音速手刃”。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">超薄形态：因为是超薄形态，在计算因攻击部位而造成的减值时减少<SPAN 
-lang=EN-US>2</SPAN>点，同时在击破物体的相关检定上失去<SPAN lang=EN-US>2</SPAN>点成功。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">科学：你在使用手刀时，你可以科学和电脑技能中的较低者代替白刃进行判定。本特性对于全部手刀系列都生效。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">进化：<SPAN 
-lang=EN-US>DD+1000 </SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">变形技能：如果你使用“音速手刃”的短剑形态进行攻击并命中后，在同一回合启动变为“音速手刃形态<SPAN 
-lang=EN-US>2</SPAN>”的变形效果时，若你仍然保有移动动作，则你可以用移动动作进行一次切割。对该目标进行一次敏捷<SPAN 
-lang=EN-US>+</SPAN>白刃（短剑）检定，目标需以强韧对抗。若对方失败，则每轮皆会受到<SPAN 
-lang=EN-US>1L</SPAN>伤害，持续等同于失败数的轮数。特殊地，若目标在这期间进行了移动，则每次移动后，皆会额外受到等同于其【敏捷上的附加成功】数的严重伤害；对方会明确地知道进行移动的后果。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">这被视为一种流血效果，无法被不基于肉体的<SPAN 
-lang=EN-US>DR</SPAN>和伤害吸收吸收减免（如盔甲携带的<SPAN 
-lang=EN-US>DR</SPAN>无效），亦对没有体液的生物无效，且受到任何医回复伤势的效果后立刻消失。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal> 
- </SPAN>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>
-<P></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>C+1500 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>Delay</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“波形延迟” <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">受到攻击时以反射动作启动，立即移动一个身位。这不会令你进行物理上的移动，只会让对方本次攻击承受<SPAN 
-lang=EN-US>AP</SPAN>等级<SPAN lang=EN-US>+2</SPAN>的<SPAN 
-lang=EN-US>DP</SPAN>减值。如果对方本次攻击未造成伤害，则会因为受到波形影响而减少<SPAN 
-lang=EN-US>AP</SPAN>等级<SPAN lang=EN-US>+2</SPAN>的防御，持续到你的下一个回合结束。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>D+1000 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>Anglefly</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“天使之羽” <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">从身后展开一对天使的翅膀，根据<SPAN 
-lang=EN-US>AP</SPAN>等级获得<SPAN lang=EN-US>C~A</SPAN>分别为良好<SPAN 
-lang=EN-US>/</SPAN>优秀<SPAN lang=EN-US>/</SPAN>完美的飞行能力，飞行速度<SPAN 
-lang=EN-US>C~A</SPAN>分别为<SPAN lang=EN-US>40/80/160</SPAN>米每轮。可以自由动作展开和收起。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">但是在视觉上，当你展开和收拢翅膀时，会不可避免的掉毛。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>B</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>B+3000</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US>Handsonic Version3 </SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">“音速手刃形态<SPAN 
-lang=EN-US> 3</SPAN>”：形似三叉戟 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">音速手刃形态<SPAN 
-lang=EN-US>3</SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：特异本质<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">分类：短剑<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">武器基本属性：武器伤害<SPAN 
-lang=EN-US>11L</SPAN>，破甲<SPAN lang=EN-US>3</SPAN>，破魔<SPAN 
-lang=EN-US>3</SPAN>，【<SPAN lang=EN-US>9</SPAN>加骰】<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">震荡：使用本武器攻击时额外忽略<SPAN 
-lang=EN-US>10</SPAN>点硬度。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">创造：这把武器是你自己制造的，将“音速手刃形态<SPAN 
-lang=EN-US>2</SPAN>”进化成本武器是一个迅捷动作，必须在你召唤出“音速手刃 形态<SPAN 
-lang=EN-US>2</SPAN>”时才可以进化成该武器，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的“音速手刃”。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">聪慧：可以以智力代替敏捷进行判定，对于全部手刀系列都生效。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">进化：<SPAN 
-lang=EN-US>CC+2000 </SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">前提：已进化“音速手刃形态<SPAN 
-lang=EN-US>2</SPAN>”； <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">变形技能：如果你使用“音速手刃形态<SPAN 
-lang=EN-US>2</SPAN>”攻击对手的四肢部位并命中目标后，在同一回合启动变为“音速手刃形态<SPAN 
-lang=EN-US>3</SPAN>”的变形效果时，若你仍然保有移动动作，可以用移动动作进行一次割裂攻击。投掷一次敏捷<SPAN 
-lang=EN-US>+</SPAN>白刃检定，目标需以强韧对抗。若对方失败，对方将会承受等同于“音速手刃 形态<SPAN 
-lang=EN-US>2</SPAN>”的割裂效果，并根据打击部位不同造成不同效果： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">腿：对方的移动速度减少等同于对方对抗失败的差值米数； 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">手：攻击<SPAN 
-lang=EN-US>DP</SPAN>减少等同于对方对抗失败的差值； <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">此外，现在你使用三叉戟形态进行攻击时，如果造成了伤害，同时可造成穿透效果（即将武器插入目标内部），这只是一种视觉效果，并没有任何实际意义，但可能成为其他功能的前提要求。如果要发挥穿透效果，使用“形态<SPAN 
-lang=EN-US>3</SPAN>”攻击时要承受<SPAN lang=EN-US>-10DP</SPAN>。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal> 
-</SPAN>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>
-<P></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>B+3000 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>Handsonic 
-Version5 </SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“音速手刃 形态<SPAN 
-lang=EN-US> 5</SPAN>”：形状类似巨钳 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">在不使用其他版本的手刃形态下，使用一个即时动作，可以召唤“音速手刃 
-形态<SPAN lang=EN-US> 5</SPAN>”。这是一把<SPAN lang=EN-US>7L</SPAN>，<SPAN 
-lang=EN-US>5</SPAN>破甲，<SPAN lang=EN-US>5</SPAN>破魔，<SPAN 
-lang=EN-US>8</SPAN>加骰的武器。其他属性等同于<SPAN lang=EN-US>V1</SPAN>短剑。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">在使用第五形态进行格挡时，在对抗远程实体攻击时，防御（或反射，视攻击的方式）额外具有<SPAN 
-lang=EN-US>3</SPAN>个附加成功。 <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>B+3000 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>Howling</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“高频咆哮” <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">将<SPAN 
-lang=EN-US>2</SPAN>体音速手刃交叉后以音叉形式发出的音波冲击，大范围杀伤技能。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">以一个整轮动作，进行一次敏捷<SPAN 
-lang=EN-US>/</SPAN>智力取高<SPAN lang=EN-US>+</SPAN>科学<SPAN 
-lang=EN-US>+5</SPAN>的检定，对周身操控<SPAN 
-lang=EN-US>/</SPAN>米的范围内的所有生物造成等同于你检定成功数的音波伤害，强韧减免。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">你只能在双持<SPAN 
-lang=EN-US>Handsonic </SPAN>“音速手刃”的情况下使用本技能。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>A</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级： <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
- </SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>Handsonic 
-Version4 </SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“音速手刃 形态<SPAN 
-lang=EN-US> 4</SPAN>”：<SPAN lang=EN-US>A+4500 </SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">前提：已进化“音速手刃 形态<SPAN 
-lang=EN-US> 3</SPAN>” <SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">形似莲花。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">不同于其他形态，形态<SPAN 
-lang=EN-US>4</SPAN>只能由形态<SPAN lang=EN-US>3</SPAN>开始，以一个移动动作启动。武器属性变更为钝器，伤害为<SPAN 
-lang=EN-US>2L</SPAN>。你仍可以敏捷或智力代替力量、科学代替白刃进行攻击检定，除此之外失去其他“音速手刃”的效果。 <SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">如果你已经以形态<SPAN 
-lang=EN-US>3</SPAN>成功造成了穿透效果，并且你仍保有移动动作，可以通过展开形态<SPAN 
-lang=EN-US>4</SPAN>而造成一次追加伤害。追加伤害为（“音速手刃 形态<SPAN lang=EN-US> 4</SPAN>”的武器伤害<SPAN 
-lang=EN-US>+</SPAN>使用者力量值的一半）。这次伤害无视对手的防御，非基于身体内部展开的伤害吸收或<SPAN 
-lang=EN-US>DR</SPAN>也不会产生任何作用。在这次追加的伤害中，会有<SPAN lang=EN-US>2</SPAN>点被转换为恶性。 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US> 
-</SPAN>&nbsp;</P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>A+4500 
-</SPAN></P>
-<P style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" lang=EN-US>Overdrive 
-</SPAN><SPAN style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">“被动超频” 
-<SPAN lang=EN-US></SPAN></SPAN></P>
-<P 
-style="TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
-class=MsoNormal align=left><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">每场景限一次，你可以在攻击或者受到攻击前，以一个反射动作启动<SPAN 
-lang=EN-US>Overdrive </SPAN>“被动超频”，选择一项生理属性，该属性值<SPAN 
-lang=EN-US>+10</SPAN>点增强加值，但增加的属性值不可超过你的科学与电脑等级中的较低者。增加的属性只持续到本次攻击行为结束。在使用这个能力的同时，你可以同时视为启动了创世级<SPAN 
-lang=EN-US>AP</SPAN>令自身彻底数据流化的效果（显然地，这会消耗该能力的使用次数）。在这个效果结束后，你可以以一个自由动作，对你触及范围内的单个目标进行一次攻击；若你具有在这次攻击后转化“音速手刃”的能力，你可以以自由动作完成转化并使用变形技能。<SPAN 
-lang=EN-US></SPAN></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="富江.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="黑暗猎手改造-花之舞.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="改造.htm">改造</A> &gt; <A href="$$unsavedpage31.htm">特异本质改造</A> &gt; </div>
+	<div id="winchm_template_title">Angel Player技能制造软件</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 150%"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-ascii-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">本质：特异本质</br>
+前提：电脑3级</br>
+Angel Palyer，简称AP，死后世界里立华奏使用过的程序，通过该程序使用者可以在死后世界里制造物品和调整人物属性，甚至能改造周围的环境。这个程序提供的只是一个类似的开发平台,能开发到什么程度就看使用者本人。原本该程序的能力只能在死后世界这种电脑世界中运用，但是主神通过後未来的量子力学科技，使其在任何一个世界都能发挥作用，而它的本质也就原本的科技本质转换为了特异本质。</br>
+特殊：此级改造一旦购买，则无法使用洗点系统，除非强化本改造，否则无法以任何方式获得或模拟本改造的特性和技能。</br>
+</br>
+</br>
+初心者</br>
+价格：D+1000</br>
+属性：智力+2 感知+2</br>
+能量池：无</br>
+技能树：开启D级技能树</br>
+特性：加值转换，不死之身，扫描系统（三特性），施法漏洞（负特性）</br>
+特殊：由于没有能量池和分数翻倍，额外获得2个特性。</br>
+描述：你从主神处购买了AP改造，你获得了一台搭载了AP程序的虚拟机，AP程序运载后会开始扫描周围的环境，你的身体结构优先被扫描，扫描完成后你的身体结构会在三维建模重组后呈现在AP程序的内置界面上，你的生理参数详情也会在分析完成后呈现出来，之后你便可以通过AP程序在你身体的某个部位生成你通过AP程序制造的武器，例如Handsonic；亦或是直接对你自身的生理参数进行调整，例如Overdrive。</br>
+加值转换：本级改造提供的属性加值为增强加值。</br>
+不死之身：在无数次体验过死亡的痛楚后，你对疼痛的忍耐力远超常人。你不会因为伤势失去意识。</br>
+扫描系统：你获得一台无形的虚拟计算机用以运载AP，可投射出全息界面进行操作而不用再携带常规计算机。此虚拟机实际上就是你的大脑，因此硬件能力取决于你的大脑开发程序。此虚拟机时刻与主神保持无线网络连接，并可通过特异本质的电磁波与其他科技装置进行有线或无线连接（可能需要投射出接口界面）。虽然它投射出的窗口及虚拟键盘等是无形的，但却匪夷所思的可被所有者触碰、点击或拖动。虚拟机默认只接受你一人的操作。虚拟机内的AP的专业型电脑辅助系统会对你身边的环境进行扫描，然后迅速在程序内置界面上将扫描到的物体进行三维建模重组，让你在黑暗中也能清楚地掌握周围的情况。</br>
+你获得等同于敏感范围的黑暗视觉和D级特异本质的特异本质侦测能力。</br>
+若你通过其他能力获得了一台虚拟机（如观察者，信息员，超链等），扫描系统带来的好处改为：在5米*感知的范围内，你可以进行感知＋电脑判定以扫描周围的物体，以此来代替侦查检定。你获得等同于扫描范围的黑暗视觉和D级特异本质的特异本质侦测能力。</br>
+施法漏洞：进行AP改造后的人体在施法体系上产生了漏洞，AP使用者的施法者等级皆不可超过改造等级，同时在所有施法检定上都须承受等同于改造等级*3DP内在减值。</br>
+</br>
+</br>
+</br>
+达人</br>
+价格：C+2000</br>
+属性：智力+3 感知+3</br>
+技能树：开启C级技能树</br>
+特性：加值转换，扫描系统（双特性），防御系统（正负特性）</br>
+特殊：由于分数翻倍，额外获得1个特性。</br>
+描述：购买了这个级别的AP改造之后，你的身体进行了真正意义上的改造，尽管外观和构造依然和人类没有什么差异，但是在你受伤时，你的身体会以肉眼可见的速度开始被修复，这是Distortion的一部分功能。</br>
+加值转换：本级改造提供的属性加值为增强加值。</br>
+防御系统：AP对你的生命数值进行了记录，当你的生命数值出现偏差时AP会对你进行数据还原以达到修复效果，但是与此同时，某些无害bug（临时生命）也被AP作为有害bug进行处理。</br>
+你获得1点再生。你无法获得临时生命，你一旦获得临时生命就会失去所有的临时生命。此改造一旦购买，则你无法使用洗点系统，除非强化本改造，否则无法以任何方式获得或模拟本改造的特性。</br>
+扫描系统：AP的扫描系统进行了升级，现在不仅是物体，连一些人类视觉无法观察到的生物也会被扫描进AP界面内，你对周围情况掌握得更加透彻，如同无数个摄像头在你敏感范围内存在一般。</br>
+你需要通过其他能力获得一台虚拟机（如观察者，信息员，超链等）之后才能获得以下效果：</br>
+扫描范围提升为AP等级*感知*10米，你获得了范围等同于你扫描范围的等同于改造等级的特异本质侦测能力。</br>
+</br>
+</br>
+</br>
+专家</br>
+价格：B+4000</br>
+属性：智力+4 感知+4</br>
+技能树：开启B级技能树</br>
+特性：加值转换，不死之身，扫描系统</br>
+特殊：由于分数翻倍，额外获得1个特性。</br>
+描述：现在你对AP的理解和应用更近一步，天使能做到的事你基本也能做到了，你不再需要沿用天使已经编写好的Guard Skill技能树，你可以开始通过AP自行研发你的专属技能，也可以使用AP来影响你一定范围内的环境对自己进行保护。</br>
+加值转换：本级改造提供的属性加值为增强加值。</br>
+扫描系统：口袋中的刀具，天花板上的摄像头，耳朵里的窃听器，昏睡红茶里的不明颗粒物，什么都逃不过你的扫描，扫描到的物体能被AP系统进行分析，若你拥有相关领域的知识，你能够清楚地掌握它们的结构从而提前察觉危险。你可以进行智力＋电脑判定以分析扫描范围内的物体，以此来代替调查检定。你可以以自由动作对你扫描出的物体进行一次分析：</br>
+1.无消耗被动，你立刻分析生物体的结构意义（若扫描对象没有特殊能力，你能发现扫描范围内建筑物的全貌，这意味着在你扫描范围内的暗门和陷阱，饮料中的药物对你失去了隐蔽性。月之民隐藏的耳朵和剑修隐藏的剑，若需要对抗你以智力+电脑进行对抗）</br>
+2，自由动作消耗1点意志对你扫描到（已经被你通过扫描能力精确定位过）的一件物体进行长达10轮的精密分析，你可以额外消耗X点意志对X个物体进行同时分析，你同时分析的物体数量不能超过超过你的AP等级+你在电脑技能上的附加成功数。</br>
+在你第一轮结束时，你对物体完成基础分析，</br>
+你获知该特定物体的材质/生物分类，</br>
+或者是一件科技/魔幻本质的物品的分类，</br>
+或者是一种疾病或毒素的作用。</br>
+在你第三轮结束时，你对物体完成中度分析，</br>
+你获知这个特定物体的结构值/生命值状况（包括上限和损失值，每轮结束时刷新一次），硬度/能量池状况（类型和等级）。</br>
+若你的科学/神秘学等级需要超过这个科技/魔幻本质的物体拥有的最高支线等级（D1S5），你可以再获知这件物品的基本属性。</br>
+若你的科学+医学/神秘学+医学等级需要超过该自然/超自然本质疾病和毒素拥有的最高支线等级（D1S5）的平方，你可以再获知这种病毒的治疗方法。</br>
+在你第五轮结束时，你对物体完成高度分析，</br>
+你获知这个特定物体的能量池详情（包括上限和损失值，每轮结束时刷新一次）。</br>
+若你的电脑+科学/神秘学等级超过这个科技/魔幻本质的物体拥有的最高支线等级（D1S5）的平方，你可以再获知这件物品的特殊属性。</br>
+若你的科学+医学/神秘学+医学等级超过该自然/超自然本质疾病和毒素拥有的最高支线等级（D1S5）的平方，你可以再获知这种病毒的治疗方法。</br>
+在你第十轮结束时，你对物体完成完全分析，</br>
+若你的科学/神秘学等级达到这个解读这个科技/魔幻本质的物品图纸所需要的条件，你可以再获知这件物品的制作思路，你在制造这间物品时花费的周期时间减半。</br>
+若你的科学+医学/神秘学+医学等级需要超过该自然/超自然本质毒素拥有的最高支线等级（D1S5）的平方，你可以再获知这种病毒的制作思路，你在制造这种病毒时花费的周期时间减半。</br>
+无论你是否满足获知信息的条件，在你第十轮结束时你都会结束对这个物体的分析，你可以在任何时候对已经有过扫描记录（曾经被你通过扫描能力精确定位过）的物体进行分析，但是只能获知最后一次记录（脱出你扫描范围时）的信息。</br>
+不死之身：&ldquo;你想杀人吗！？话说已经被杀了这都不算吐槽了，开什么玩笑，明明痛得要死却死不掉，真是糟透了&hellip;&hellip;&rdquo;AP对你的身体进行了改造，完美地在你身上再现了本来是死后世界里才存在的不死之身效果。</br>
+你的生命值被恶性填满时不会死亡，但是之后再受到任何1点伤害即会死亡。每场景一次，当你死亡时，将你的生命值变为被恶性伤害填满，但是不会死亡，这视为一个等同于你改造级因果律的效果，同时你获得等同于致死伤害值（若为即死攻击则改为受到等同于最大生命值）的剧痛点数，强韧豁免，不可叠加，不会导致毁灭性后果。每天一次，若你因不死之身带来的剧痛点数而昏迷，在经过一次15分钟的短休息之后你立刻将生命值恢复到最大。若你身上有类似于不死之身的效果（如护命玉佩、致命抵御、替身甲、初心者等），则最后再触发不死之身效果。</br>
+</br>
+</br>
+</br>
+A级：</br>
+大师</br>
+价格：A+8000</br>
+属性：智力+6 感知+6</br>
+技能树：开启A级技能树</br>
+特性：加值转换，防御系统，扫描系统</br>
+特殊：由于分数翻倍，额外获得1个特性。</br>
+加值转换：本级改造提供的属性加值为增强加值。</br>
+防御系统：这个等级的AP能将二进制化的数据流虚拟至你的身体周边，形成一种类似立场的防护效果，实际上这是将你身边的数据流二进制化然后改写的效果。你获得相当于你传奇智力*2的全伤害吸收能力。</br>
+扫描系统：扫描系统对你的作用已经不再局限于辅助调查，在对周围环境进行精密的监控之后，你能镇定地应对一切突发情况，当其他人还没意识到发生了什么的时候，你已经做好了充分的准备，规避危险对你而言不再是应急措施，而是你行动计划中的一部分。你每有1点传奇智力，则你的沉着获得1点内在加值，你现在使用反射动作时不会失去迅捷动作，你不会受到突袭轮，当你遇到突袭时，你可以一同进入突袭轮行动。</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+Angel Player技能树：</br>
+<br />选开：使用AP软件发动Handsonic，Distortion，Delay，Harmonics，Howling时需要用口语命令，你必须用清晰的语音念出指令才能调用AP技能。</br>
+</br>
+</br>
+</br>
+Handsonic 音速手刃</br>
+价格：D+500</br>
+描述：音速手刃初版，在手背处生成的短剑，可用与攻击与格挡，是立华奏出于自卫目的研发的最初的音速手刃，所以攻击性能不佳，但是防御性能非常优秀。</br>
+本质：特异本质</br>
+分类：短剑</br>
+体积：2</br>
+武器基本属性：武器伤害3L，【9加骰】，造成挥砍或穿刺伤害</br>
+武器特殊属性：【格挡】</br>
+创造：这把武器是你自己制造的，制造一把武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;，由于主神只是搬运了立华奏已经写好的程序，你只能在双手手背各生成一把音速手刃。</br>
+护身：当你使用该武器进行格挡时，你额外增加1点格挡防御。若你同时持用两把音速手刃，则&ldquo;护身&rdquo;带来的格挡防御再增加1点。</br>
+格挡：本武器获在计算【格挡】特性时，武器体积上升1点。若你同时持用两把，在计算【格挡】特性时，武器体积再上升1点。</br>
+研发：花费13XP习得ndsonic Version2。</br>
+研发：当你习得ndsonic Version2时，花费13XP习得ndsonic Version3. ndsonic改为Handsonic</br>
+<br />研发：当你习得ndsonic Version3时，花费13XP习得ndsonic Version4.</br>
+</br>
+</br>
+</br>
+Handsonic Version1 音速手刃V2</br>
+本质：特异本质</br>
+描述：二版音速手刃，是强化了高速性能的超薄型态。</br>
+分类：短剑</br>
+体积：2</br>
+武器基本属性：武器伤害4L，【9加骰】，造成挥砍或穿刺伤害</br>
+武器特殊属性：【格挡】</br>
+创造：这把武器只能由你自己制造的音速手刃V1进化而来，将&ldquo;音速手刃V1&rdquo;进化成本武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;。</br>
+高速：这把武器强化了高速性能，获得高速3。</br>
+超薄：当你使用本武器攻击物品时，忽略目标5点硬度。</br>
+护身：当你使用该武器进行格挡时，你额外增加1点格挡防御。若你同时持用两把音速手刃，则&ldquo;护身&rdquo;带来的格挡防御再增加1点。</br>
+格挡：本武器获在计算【格挡】特性时，武器体积上升1点。若你同时持用两把，在计算【格挡】特性时，武器体积再上升1点。</br>
+</br>
+</br>
+</br>
+Handsonic Version1 音速手刃V3</br>
+本质：特异本质</br>
+描述：三版音速手刃，立华奏觉得造型不雅观的三叉戟。</br>
+分类：短剑</br>
+体积：2</br>
+武器基本属性：武器伤害4L，破甲2，【9加骰】，造成挥砍或穿刺伤害</br>
+武器特殊属性：【格挡】</br>
+创造：这把武器只能由你自己制造的音速手刃V2进化而来，将&ldquo;音速手刃V2&rdquo;进化成本武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;。</br>
+超薄：当你使用本武器攻击物品时，忽略目标5点硬度。</br>
+变形：使用本武器对物品进行攻击时，若成功命中，可以无视硬度，额外对其造成2点物理伤害。</br>
+护身：当你使用该武器进行格挡时，你额外增加1点格挡防御。若你同时持用两把音速手刃，则&ldquo;护身&rdquo;带来的格挡防御再增加1点。</br>
+格挡：本武器获在计算【格挡】特性时，武器体积上升1点。若你同时持用两把，在计算【格挡】特性时，武器体积再上升1点。</br>
+</br>
+</br>
+</br>
+Handsonic Version1 音速手刃V4</br>
+本质：特异本质</br>
+描述：四版音速手刃，将短剑的尖端做了莲花状，立华奏觉得很可爱。</br>
+分类：短剑</br>
+体积：2</br>
+武器基本属性：武器伤害5L，破甲2，【8加骰】，造成挥砍或穿刺伤害</br>
+武器特殊属性：【格挡】</br>
+创造：这把武器只能由你自己制造的音速手刃V3进化而来，将&ldquo;音速手刃V3&rdquo;进化成本武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;。</br>
+可爱：当佩戴者为女士时，所有社交检定+2DP表现加值。</br>
+超薄：当你使用本武器攻击物品时，忽略目标5点硬度。</br>
+变形：使用本武器对物品进行攻击时，若成功命中，可以无视硬度，额外对其造成2点物理伤害。</br>
+护身：当你使用该武器进行格挡时，你额外增加1点格挡防御。若你同时持用两把音速手刃，则&ldquo;护身&rdquo;带来的格挡防御再增加1点。</br>
+格挡：本武器获在计算【格挡】特性时，武器体积上升1点。若你同时持用两把，在计算【格挡】特性时，武器体积再上升1点。</br>
+</br>
+</br>
+</br>
+Handsonic Version5 音速手刃V5</br>
+价格：D+500</br>
+分类：短剑</br>
+体积：2</br>
+描述：5版音速手刃，是天使按照音无所说&ldquo;冷酷的天使要更加邪恶&rdquo;而改制，故意把手刃设计成两根尖牙似的难看的样子，但这个设计同时也可以在两根尖牙中间绑上橡皮筋作弓箭使用。</br>
+武器基本属性：武器伤害6L,破甲2，【8加骰】，造成挥砍或穿刺伤害</br>
+武器特殊属性：【格挡】</br>
+创造：这把武器是你自己制造的，制造武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;，由于主神只是搬运了立华奏已经写好的程序，你只能在双手手背各生成一个音速手刃V5。</br>
+聪慧：此时你可以以智力代替力量进行近战攻击检定。</br>
+第二种用法：你可以使用一个迅捷动作来为Handsonic Version5绑上橡皮筋将其当作弹射类武器使用，变回来是一个自由动作，此时这个武器变为以下数据。</br>
+</br>
+弹弓：</br>
+描述：在5版音速手刃的两根尖牙中间绑上橡皮筋制成的弹弓。</br>
+分类：特殊武器（弹弓）</br>
+体积：1</br>
+武器基本属性：武器伤害2b，基本射程为感知*10米，造成物理钝击伤害。</br>
+武器特殊属性：【无限子弹】</br>
+弹弓：这个武器使用敏捷+运动（射击）+武器伤害进行远程攻击检定，伤害上限为改造等级*3+武器伤害*2。</br>
+</br>
+</br>
+</br>
+Handsonic Version22 音速手刃V22</br>
+价格：D+500</br>
+本质：特异本质</br>
+描述：22版的音速手刃，立华奏为了在隐藏自己身份的前提下进行战斗而做出来的猫掌版本。</br>
+分类：拳套</br>
+体积：2</br>
+武器基本属性：武器伤害3L，造成物理钝击伤害。</br>
+武器特殊属性：【眩晕】</br>
+创造：这把武器是你自己制造的，制造武器是一个迅捷动作，这把武器你只能由你自己使用。你可以随时以自由动作取消已经制造出的&ldquo;音速手刃&rdquo;，由于主神只是搬运了立华奏已经写好的程序，你只能在双手手背各生成一个猫掌。</br>
+可爱：这个武器看起来非常可爱，你除了威吓的所有社交检定+2DP表现加值。</br>
+兵器：当你成功触发【眩晕】效果时，该眩晕点数额外增加相当于你传奇智力和电脑等级带来的附加成功之和/点。</br>
+</br>
+</br>
+</br>
+Overdrive &ldquo;被动超载&rdquo;</br>
+价格：D+1000</br>
+动作：反射动作/自由动作</br>
+能耗：1点意志力</br>
+射程：无</br>
+目标：自己</br>
+范围：无</br>
+持续：一场景</br>
+描述：被动技能Overdrive，通过AP程序对你的身体数据进行调整，让你拥有惊人的爆发力。</br>
+效果：一场景一次，开启后你选择一项生理属性获得4点内在加值，同时你启动后每轮结束时需要受到6-电脑技能带来附加成功数/点的冲击伤害。除非强化本改造，否则无法以任何方式获得或模拟本技能。</br>
+注意：本技能一旦开启除非时间到了否则不能关闭。</br>
+增幅：当你改造提升至C级时，你可以额外再花费2点意志力，若如此做，属性加值变为6点，同时，伤害上升至严重伤害。</br>
+增幅：当你改造提升至B级时，你可以额外再花费2点意志力（与C级叠加），若如此做，属性加值变为8点，伤害上升至恶性伤害。</br>
+增幅：当你改造提升至A级时，你可以额外再花费2点意志力（与C、B级叠加），若如此做，属性加值变为12点，伤害上升至耐力伤害。</br>
+</br>
+</br>
+Wing 天使之翼</br>
+价格：D+500</br>
+动作：标准动作</br>
+能耗：1点意志力</br>
+射程：无</br>
+目标：自己</br>
+范围：无</br>
+持续：一场景/解消</br>
+描述：立华奏听从音无的建议，为了更加像天使而编写的装饰用程序，可以在坠落途中进行盘旋安全降落，在主神的升级下能拥有更加强大的飞翔能力。在视觉上，当你展开和收拢翅膀时，会不可避免的掉毛。</br>
+效果：从身后展开一对天使的翅膀，你获得相当于基础移动速度的笨拙飞行能力，以及摸的盘旋专长提升1级。你可以以一个自由动作将翅膀消解。</br>
+增幅：当你改造每有1级，则你可以额外再花费1点意志力，若如此做，你可以选择因此能力获得你的飞行速度翻倍或者你的机动性提升1级。</br>
+</br>
+</br>
+</br>
+C级：</br>
+</br>
+Guard Skill&middot;Delay&ldquo;波形延迟&rdquo;</br>
+价格：C+1000</br>
+动作：反射</br>
+能耗：无</br>
+射程：无</br>
+目标：自己</br>
+范围：无</br>
+持续：1轮</br>
+描述：在受到攻击时突然加速，移动时带有残影。在视觉效果上，你在受到攻击的同时进行爆发性移动，同时会留下片刻的残影，残影维持0.1秒后会立刻破碎成0和1组成的数据流。</br>
+效果：当你受到攻击时你能以一个反射动作立即移动一个身位，这不会令你进行物理上的移动，只会让对方本次攻击检定承受改造等级*3点DP无名减值。如果对方本次攻击未造成伤害，则会因为受到波形影响而其基础防御减少相当于改造等级*3点，持续到你的下一个回合结束。</br>
+并且，当你使用本能力后，若你下一轮移动过的距离（包括传送）不少于自身的基础移动速度，则下轮你结束时，你进行了全防御。</br>
+</br>
+</br>
+</br>
+B级：</br>
+</br>
+Guard Skill&middot;Howling&ldquo;高频咆哮&rdquo;</br>
+价格：B+2000</br>
+动作：整轮动作</br>
+能耗：3点意志力</br>
+射程：以你为中心</br>
+目标：所有目标</br>
+范围：感知*10米半径</br>
+持续：专注</br>
+描述：将2体音速手刃交叉后举过头顶以音叉形式发出音波冲击，大范围伤害性技能。使用的时候自身无法进行移动和闪避，原版只是用来震慑的技能并且对塞住耳朵的人没有作用，经过主神的修改有了进阶版本，强化了杀伤性，并且对塞住耳朵的人也能生效。</br>
+效果：你在维持期间失去当前所有的基础，闪避，洞察，格挡防御，并且你也无法通过任何能力主动进行格挡，全防，移动。</br>
+启动时，你进行一次智力+电脑（编程）的检定，这次检定具有12DP招式加值，每轮对范围内的所有除你以外的目标造成相当于你成功数的范围音波伤害，伤害上限为智力+电脑+改造等级*2.若成功造成伤害，则目标受到相当于伤害数的眩晕点数，强韧豁免，可以叠加。</br>
+受到攻击的生物可以明确地知道，可以以一个反射动作捂住耳朵来让自己减免一半的晕眩点数，但是这会让他们失去下个回合的标准动作而不是迅捷动作。在你维持技能期间进入攻击范围的生物也要受到一次攻击，每个生物每轮最多只会受到来自这个技能的一次攻击。</br>
+你在维持这个技能的时候失去当前所有的基础，闪避，洞察，格挡防御，你无法通过任何能力主动进行格挡，全防，移动。</br>
+若你启动本能力时已经开启了Overdrive，你可以额外消耗1点意志力，再次获得等同于Overdrive提供的内在加值的能量加值，若如此做你会关闭掉Overdrive。</br>
+</br>
+</br>
+</br>
+Guard Skill&middot;Harmonics 谐波叠加</br>
+本质：特异本质</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：无</br>
+射程：无</br>
+目标：自身</br>
+范围：无</br>
+持续：一部影片</br>
+描述：使用AP将自身的&ldquo;数据&rdquo;进行复制，制造与自己记忆、能力完全相同的，但是性格由你设定的分身，由于AP并不具有能够复制主神那些强大资源的能力，你制造出来的分身只具有你自身和AP提供的能力。</br>
+效果：你制造一个分身，分身在制造出来的时候自动复制本体身上的服装(只有装饰作用，所有物品只有外表会被复制，这意味着分身不会获得任务来自物品的好处，也无法通过本能力复制新的物品)，并且每个分身都会占用你20点意志力上限，若你的意志力上限不到20则无法继续制造分身，分身在影片结束或者死亡或者解消时会立刻破碎成0和1的数据流自动回到本体，。</br>
+1.分身继承自己常态生理属性(不包括临时加值)，战斗中先攻和本体相同数值，本体&rarr;分身1&rarr;分身2。分身的生命值全部为完好状态，分身有自己完整的动作，召唤出来的当轮分身不可行动。</br>
+2.分身的心智属性全部为1，但是在平时表现上和进行相关检定的时候使用本体的常态心智属性(不包括临时加值和buff)进行判定。</br>
+3.分身具有独立的意识(分身默认是由st进行控制的NPC)，分身的性格需要在获得技能的时候就设定好，修改性格需要10XP。分身的社交属性为本体的常态属性进行临时调整，将常态社交属性进行重新分配（需要符合性格设定，比如沉着1的暴躁老哥）。</br>
+4.分身只是由AP将本体数据进行复制再粘贴的具有智能的临时造物，不被视为造人，不具有购买资源的能力以及造人的奖励和惩罚，分身不能使用本改造以外的主神资源能力以及无支线以上物品（包括但不限于技艺，法术，辉耀），任何人无法通过任何方式吞噬分身获得特殊收益(包括但不限于食脑秘术，合体耳环，黑光)。</br>
+4.由于AP无法复制从主神处购买的各种强大能力，分身只保留本体拥有的技能，专长以及AP改造能力，失去其他主神处获得的能力(包括但不限于血统，称号，技艺，法术)，分身只能使用本改造技能树里的技能，消耗你的意志力。</br>
+5.分身在会回到本体的时候会与本体的意识进行融合，本体获得分身的记忆，但是分身在制造出来后所受过的每一点伤害都会对本体造成1点精神严重伤害，若本体的生命值因此被恶性伤害填满，本体不会死去，但是剩下的每1点伤害会消耗本体1点意志力，当意志力为0时本体将会进入昏迷状态1小时，每多出1点伤害，昏迷时间延长1小时，昏迷时间内按照长休息规则自然回复意志力，这个昏迷无法通过任何其他方式进行解除。</br>
+6. Absord 谐波回收，为 Harmomics的反向技能，花费一个标准动作，回收所有分身。</br>
+特殊:由于这个技能特别麻烦，在购买的时候需要和st提前商定，st随时有权以麻烦为理由禁止PC购买和使用这个技能。</br>
+</br>
+</br>
+</br>
+A级：</br>
+</br>
+Guard Skill&middot;Distortion&ldquo;扭曲力场&rdquo;</br>
+价格：A+4000</br>
+动作：标准动作</br>
+能耗：5点意志力</br>
+射程：无</br>
+目标：自己</br>
+范围：无</br>
+持续：一场景</br>
+描述：将指向自己靠惯性运动的运动物体发生偏转改变其运动路径。通过语音指令调动技能，之后你的身体将会在1秒内由下到上被由0和1组成的一圈数据流进行覆盖，在视觉效果上你看起来像是镀上了一层薄膜，数据流覆盖过的身体部位中的子弹会被排出体外，随后伤口会被修复，当你面对弹药的轰炸时，由0和1的数据流组成的立场会暂时性显现出来，攻击你的子弹的轨道会被扭曲开来，爆炸无法对你造成明显的伤害。</br>
+效果：使用一个标准动作启动扭曲力场，进行一次智力+电脑（编程）检定，持续时间内你获得相当于改造等级/点再生，针对远程攻击时你获得等同于检定成功数的偏斜防御并且你获得【防弹】特性，针对范围伤害时你的反射检定获得等同于成功数的偏斜加值并且你获得【防能量武器】特性（无论如何，来自Distortion的加值只被计算一次，在可以复数次计算的场合，你只可以选择一个加值类型进行判定），若一次攻击附带的破魔或特性将Distortion带来的防御加值全部破除，则该次攻击可以忽略本技能带来的【防弹】和【防能量武器】特性。</br>
+当你进行全防御时，一面硬度7的无形墙壁会将你保护起来，远程攻击和范围伤害只有克服墙壁硬度才会对你造成伤害（即面对远程攻击和范围攻击时你视为拥有7点硬度）。</br></SPAN></P></SPAN></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

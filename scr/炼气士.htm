@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(348);
+  parent.nav.tree.selectNode(432);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,606 +179,318 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="琴弦师.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="New_Item135.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="称号.htm">称号</A> &gt; <A href="$$unsavedpage16.htm">战士类</A> &gt; </div>
-<div id="winchm_template_title">炼气士</div>
-<div id="winchm_template_content">
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">华人自称龙的传人，自古以来，龙气与龙脉的概念早已渗透入华夏文化的方方面面，这些气运不仅关系到国运，族运，更可以用间接的方式影响普通人，如果你已经能够生成龙气，你甚至可以自由的运用这股强大的力量，为了获取更多的力量，为了防止龙脉被破坏，为了对抗强敌，基于种种目的，越来越多的人开始形成组织，这些运用龙气的人们自称为循龙者，这里介绍的是其中一支炼气士。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">称号获得前提：力量<SPAN 
-lang=EN-US>3</SPAN>，体质<SPAN lang=EN-US>3</SPAN>，敏捷<SPAN 
-lang=EN-US>3</SPAN>，感知<SPAN lang=EN-US>3</SPAN>，决心<SPAN 
-lang=EN-US>3</SPAN>，拥有龙气，东方血统<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">在获得称号的同时，你可以购买不超过当前称号级别的各种能力和技能<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>D</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级称号：<SPAN 
-lang=EN-US>D+1000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特性：练气<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">练气：你的训练等级每提升一级，你的龙气池上限<SPAN 
-lang=EN-US>+10</SPAN>（<SPAN lang=EN-US>D10</SPAN>～<SPAN 
-lang=EN-US>AA50</SPAN>）<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>练体：你的训练等级每提升一级，你的基础移动速度增加10米。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>D</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">直觉闪避：<SPAN 
-lang=EN-US>1000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：你的基础防御随称号等级提高<SPAN 
-lang=EN-US>1</SPAN>（<SPAN lang=EN-US>D1</SPAN>～<SPAN lang=EN-US>AA5</SPAN>），并且忽略称号等级/次的多次攻击减值。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>C</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级称号：<SPAN 
-lang=EN-US>C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特性：导气，观气<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">观气：查颜观相，炼气士们可以通过观察龙气的脉动了解一个人的命数和气运，炼气士在感受技能判定上有4<SPAN 
-lang=EN-US>DP</SPAN>洞察加值。在战斗时，炼气士可以选择一位敌人，消耗<SPAN 
-lang=EN-US>2</SPAN>点龙气，耗费一个标准动作观察敌人的气运，进行一个感知+感受检定，DC为目标的2+所有超自然等级（目标身上每有一个D则+1），若成功，则炼气士对该敌人的攻击，防御获得差值的洞察加值。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">导气：奔流的龙气激发你的血脉活力，你的快速医疗+1.</SPAN>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>
-<P></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>C</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级可选能力：<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">精通直觉闪避：<SPAN 
-lang=EN-US>D+1000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">前提：直觉闪避<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：凭借对龙气的掌握，你拥有超人的反射直觉，受到攻击时至多忽略<SPAN 
-lang=EN-US>8</SPAN>点高速特性。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>B</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级称号：<SPAN 
-lang=EN-US>B+4000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特性：凝气，提升<SPAN 
-lang=EN-US>-</SPAN>观气<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">凝气：你将龙气凝聚成无形之刃，强化武器的攻击力，选择一类偏好武器，该武器的加骰提升1级。你在持有该武器时，你攻击和防御上增加感知附加成功数的洞察加值。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">观气：炼气士在在观气时获得的攻击和防御的洞察加值，现在扩展到三豁免检定上。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>B</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">云龙击：<SPAN 
-lang=EN-US>CC+1500</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：你在武器上灌注飞腾之力，消耗<SPAN 
-lang=EN-US>3</SPAN>点龙气，以一个标准动作，你的武器化做飞龙脱手而出，猛扑对手，最大射程为<SPAN 
-lang=EN-US>50</SPAN>米<SPAN lang=EN-US>+10</SPAN>米<SPAN 
-lang=EN-US>/</SPAN>每决心值，这相当于你发动一次近战攻击，并附加贯穿效果，若成功命中敌人，则你可以选择花费一个移动动作将自己拉到敌人的身边。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">探龙脉：<SPAN 
-lang=EN-US>CC+1500</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：无论是奇门遁甲还是周易之说，龙脉所处，必有生门，而循龙者对龙脉龙气的天生敏感，更使他们能够在战局中时刻保持主动，占地利之便。炼气士只要每回合主动移动过，在移动结束后就可以宣布占住生门之位，在生门之位时，炼气士受到伤害时，在计算伤害减免能力之后，最终的伤害减半。但是如果战场中存在敌方炼气士，且对方先攻较高，则在对方使用此能力后你无法使用此能力，反之亦然。一旦炼气士在宣布占住生门之位后被迫移动过，则视为其离开生门之位。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>A</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级称号：<SPAN 
-lang=EN-US>A+8000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特性：御气<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">御气：通过有效的驾御龙气，当你驱动龙气使用任何技能，招式时，最终结果你额外获得<SPAN 
-lang=EN-US>2</SPAN>个自动成功，此外你最多免疫等于练气士等级的心灵效果。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>A</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">阵崩：<SPAN 
-lang=EN-US>AA+12000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">需求：拥有最少一个<SPAN 
-lang=EN-US>B</SPAN>或以上级练气士称号提供的可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：如果你身处一个可以为对手带去增益或给己方带来不利的范围性效果中时，你免疫不利效果。并且可以以一个移动动作，消耗与该效果等级相应的龙气（<SPAN 
-lang=EN-US>D1C3B5A7S9</SPAN>），以风度+决心<SPAN 
-lang=EN-US>+</SPAN>炼气士等级对抗该效果的发动者发动本技能的主属性+主技能，若没有则使用意志，如果是物品带来的效果则与制作者对抗，若没有制作者则过DC，评价物品等级，D：3，C：9，以此类推。如果你在对抗中胜出，则该效果被破坏，引导效果则强制终止，并且该效果的发动者受到双方对抗差值纯能量伤害，如果为物品，则物品若非神器，则直接摧毁，若为神器，则不会永久破坏而是压制其效果直到遭遇结束。</SPAN>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>
-<P></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>AA</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级称号：<SPAN 
-lang=EN-US>AA+12000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">特性：吸灵<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">吸灵：你的每次攻击都可以借助天地灵气来辅助龙气的效力。而且你磅礴的龙气甚至可以使其他能量臣服。每次攻击只要造成伤害，如果被伤害的对手也拥有意志以外的通用能量池，只要造成伤害，则对手的通用能量池直接损失等同你攻击伤害的能量（从能量上限最小的开始扣，最少扣<SPAN lang=EN-US>1</SPAN>，不得扣空，到<SPAN 
-lang=EN-US>1 </SPAN>换能量池继续扣）复数敌人则每人平均分摊（单数零头随机选<SPAN 
-lang=EN-US>1</SPAN>人），最大波及人数<SPAN lang=EN-US>5</SPAN>人。然后你获得其损失数量/5的能量池，每次最多获得5点。</SPAN>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>
-<P></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US>AA</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">级可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">封龙诀：<SPAN 
-lang=EN-US>S+16000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">需求：拥有最少一个<SPAN 
-lang=EN-US>A</SPAN>或以上级的练气士称号提供的可选能力<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">效果：对龙气的掌握让你更熟练的运用这股力量，对龙气的掌握让你更熟练的运用这股力量，你可以窥探万物气运，并加以改变，消耗<SPAN 
-lang=EN-US>12</SPAN>点龙气和<SPAN lang=EN-US>2</SPAN>点意志力，你可以让敏感视线内最多你风度附加成功数+1的敌人的全部检定受到<SPAN lang=EN-US>-10DP的幸运减值，</SPAN>或者使包括你在内的风度附加成功数+1的友方的全部检定获得+10DP完美加值。确定后不可更改，惩罚或增益持续的时间为<SPAN 
-lang=EN-US>1</SPAN>轮<SPAN 
-lang=EN-US>/</SPAN>每意志值，使用此能力是一个自由动作，你不能通过多次使用该能力来累加效果。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">同时当你受到一个加值类型影响时，你可以修改改加值的类型变为完美，你最多可以修改相当于你决心附加成功数/次的完美加值。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">说明：比如你受到了一个+2力量增强加值的BUFF，则你可以将其修改为完美加值，这会让你再次获得力量增强加值的BUFF时可以叠加，但是这并不意味着你可以重复获得同一个能力或者同一个BUFF的多次影响。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">说明：由于完美加值可以叠加，则你获得+2力量增强加值时，可以修改为完美加值，然后再次获得+3力量完美加值时，由于你决心为11，则你可以再次修改为完美加值，从而获得+5力量完美加值。</SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="琴弦师.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="残暴驭手.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="称号.htm">称号</A> &gt; <A href="$$unsavedpage43.htm">战士类</A> &gt; </div>
+	<div id="winchm_template_title">炼气士</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
+lang=EN-US></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt" 
+lang=EN-US></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt">本质：魔幻本质</br>
+前提：需求力量3，需求敏捷3，需求耐力3，需求感知3，需求决心3</br>
+描述：华人自称龙的传人，自古以来，龙气与龙脉的概念早已渗透入华夏文化的方方面面，这些气运不仅关系到国运，族运，更可以用间接的方式影响普通人，如果你已经能够生成龙气，你甚至可以自由的运用这股强大的力量，为了获取更多的力量，为了防止龙脉被破坏，为了对抗强敌，基于种种目的，越来越多的人开始形成组织，这些运用龙气的人们自称为循龙者，这里介绍的是其中一支炼气士。</br>
+</br>
+</br>
+D级</br>
+价格：D+1000</br>
+能量池：龙气</br>
+技能树：开启炼气士D级技能树</br>
+特性：练气（双特性）、炼体（双特性）</br>
+描述：你的气海开始产生龙气。</br>
+练气：你每有1级称号等级，你的龙气池上限+10（D10～A40）</br>
+练体：你每有1级称号等级，你的基础移动速度增加5米。</br>
+</br>
+</br>
+</br>
+C级</br>
+价格：C+2000</br>
+技能树：开启炼气士C级技能树</br>
+特性：御气、观气、导气（双特性）</br>
+描述：你心中的龙觉醒了。</br>
+御气：通过有效的驾御龙气，当你驱动龙气使用任何技能，招式时，若该技能需要检定，则该技能中你所有的检定额外获得2个附加成功。</br>
+观气：查颜观相，炼气士们可以通过观察龙气的脉动了解一个人的命数和气运，炼气士感受技能的相关检定上获得6DP洞察加值。</br>
+导气：奔流的龙气激发你的血脉活力，你的快速医疗+1.</br>
+</br>
+</br>
+B级</br>
+价格：B+4000</br>
+技能树：开启炼气士B级技能树</br>
+特性：凝气，提升-观气（三特性）</br>
+描述：你的天命之龙引导你走上济世之路。</br>
+凝气：你将龙气凝聚成无形之刃，强化武器的攻击力，选择一种分类的武器作为自己的偏好武器，使用该武器的加骰提升1级。你在持有该武器时，你攻击和防御上获得相当于传奇感知/点的洞察加值。</br>
+观气：在战斗时，炼气士可以选择敏感范围内的一位敌人，消耗5点龙气，耗费一个标准动作观察敌人的气运，进行一个感知+感受检定，DC为目标的2+所有超自然等级（目标身上每有一个D则+1），若成功，则炼气士对该敌人的攻击，防御获得差值的洞察加值，持续一个场景。</br>
+</br>
+</br>
+</br>
+A级</br>
+价格：A+8000</br>
+技能树：开启炼气士A级技能树</br>
+特性：绝气，观气（双特性），改命</br>
+描述：你已经领悟了龙气的本质，你可以将龙气运用于更广大的领域</br>
+绝气：炼气士免疫A级的心灵效果。</br>
+观气：炼气士在在观气时获得的洞察加值，现在扩展到三豁免检定上。</br>
+改命：当你受到一个加值类型影响时，你可以修改改加值的类型变为其他加值类型，你最多可以修改相当于你传奇决心/次加值类型，不可修改为无名，幸运和完美加值。</br>
+说明：比如你受到了一个+2力量增强加值的BUFF，则你可以将其修改为器械加值，这会让你再次获得力量增强加值的BUFF时可以叠加，但是这并不意味着你可以重复获得同一个能力或者同一个BUFF的多次影响。</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+炼气士D级技能树：</br>
+</br>
+直觉闪避</br>
+价格：D+500</br>
+被动：被动</br>
+描述：凭借对龙气的掌握，你拥有超人的反射直觉。</br>
+效果：你的基础防御增加相当于称号等级/点（D1～A4），并且忽略称号等级/次的多次攻击减值，并且受到攻击时忽略称号等级*2点高速点数。</br>
+</br>
+</br>
+潜龙升天</br>
+价格：D+500</br>
+动作：自由动作</br>
+能耗：1点龙气</br>
+射程：无</br>
+目标：自身</br>
+范围：无</br>
+持续：1轮</br>
+效果：持续时间内，你的基本移动速度提升相当于称号等级*5米，你的攻击和防御获得相当于称号等级*2DP速度加值。</br>
+</br>
+</br>
+</br>
+炼气士C级技能树：</br>
+</br>
+云龙击</br>
+价格：C+1000</br>
+能耗：3点龙气</br>
+动作：标准动作</br>
+射程：50米+10米*决心值</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+描述：你在武器上灌注飞腾之力，你的武器化做飞龙脱手而出，猛扑对手。</br>
+效果：你以手中的武器发动一次近战攻击，本次攻击获得【贯穿】效果，若成功命中，则你可以选择额外花费一个移动动作将自己拉到目标的身边。</br>
+</br>
+</br>
+</br>
+吸灵</br>
+价格：C+1000</br>
+动作：被动</br>
+描述：你的每次攻击都可以借助天地灵气来辅助龙气的效力。而且你磅礴的龙气甚至可以使其他能量臣服。</br>
+效果：当你进行近战攻击时，若成功造成伤害，同时目标拥有通用能量池，则该通用能量池直接损失等同你造成伤害的能量（从能量上限最小的开始扣，最少扣1，不得扣空，到1 换能量池继续扣），若复数敌人则每人平均分摊（单数零头随机选1人），最大波及人数5人。然后你的龙气池回复其损失数量/5的能量。</br>
+</br>
+</br>
+</br>
+青鳞之佑</br>
+价格：C+1000</br>
+动作：自由动作</br>
+能耗：3点龙气</br>
+射程：无</br>
+目标：自身</br>
+范围：无</br>
+持续：1轮</br>
+效果：你获得相当于你称号等级/点快速医疗。</br>
+</br>
+</br>
+<br />白鳞之雷</br>
+价格：C+1000</br>
+动作：包含在一次攻击动作中</br>
+能耗：3点龙气</br>
+射程：见下</br>
+目标：见下</br>
+范围：见下</br>
+持续：立即</br>
+效果：你本次攻击获得【能量武器】【神圣】特性，并且若成功命中，额外对目标造成相当于称号等级*2点雷电严重伤害。</br>
+</br>
+</br>
+赤鳞之牙</br>
+价格：C+1000</br>
+动作：包含在一次攻击动作中</br>
+能耗：3点龙气</br>
+射程：见下</br>
+目标：见下</br>
+范围：见下</br>
+持续：立即</br>
+效果：本次攻击共计可以无视目标相当于你称号等级*2点伤害吸收，伤害减免，伤害抵消能力，由你选择。</br>
+</br>
+</br>
+暗鳞之爪</br>
+价格：C+1000</br>
+动作：包含在一次攻击动作中</br>
+能耗：3点龙气</br>
+射程：见下</br>
+目标：见下</br>
+范围：见下</br>
+持续：立即</br>
+效果：你本次攻击获得【能量武器】【亵渎】特性，并且若成功命中，额外对目标造成相当于称号等级*2点寒冰严重伤害。</br>
+</br>
+</br>
+</br>
+黄鳞之盾</br>
+价格：C+1000</br>
+动作：反射动作</br>
+能耗：3点龙气</br>
+射程：无</br>
+目标：自身</br>
+范围：无</br>
+持续：1轮</br>
+效果：你获得相当于称号等级/点全伤害吸收，并且增加相当于你称号等级*2点天生防御。</br>
+</br>
+</br>
+<br />炼气士B级技能树：</br>
+</br>
+探龙脉</br>
+价格：B+2000</br>
+动作：被动</br>
+描述：无论是奇门遁甲还是周易之说，龙脉所处，必有生门，而循龙者对龙脉龙气的天生敏感，更使他们能够在战局中时刻保持主动，占地利之便。</br>
+效果：炼气士只要每回合主动移动过，在移动结束后就可以宣布占住生门之位，在生门之位时，炼气士受到伤害时，在计算伤害减免，伤害吸收等类似能力之后，最终的伤害减半。但是如果战场中存在敌方炼气士，且对方先攻较高，则在对方使用此能力后你无法使用此能力，反之亦然。一旦炼气士在宣布占住生门之位后被迫移动过，则视为其离开生门之位。</br>
+</br>
+</br>
+</br>
+阵崩</br>
+价格：B+2000</br>
+动作：移动动作</br>
+能耗：5点龙气</br>
+射程：见下</br>
+目标：见下</br>
+范围：见下</br>
+持续：见下</br>
+被动：如果你身处一个可以为对手带去增益或给己方带来不利的范围性效果中时，你免疫不利效果。</br>
+效果：如果你你身处一个可以为对手带去增益或给己方带来不利的范围性效果中时，你可以发动本能力的主动能力，你进行风度+决心检定，对抗该效果发动者发动本技能的主属性+主技能，若没有则目标使用意志豁免检定。如果是物品带来的效果，则根据物品等级决定DC（D3,C9,B27,A81）。若你成功，则该效果强行终止，且该效果的施展者受到差值的不可避免的纯能量伤害，若为物品且非神兵（神器），则直接摧毁，若为神兵（神器），则不会被破坏，但是该效果无法启动，至本场景结束。</br>
+</br>
+</br>
+</br>
+龙罚</br>
+价格：B+2000</br>
+动作：被动</br>
+效果：当你使用龙气驱动的招数，技能给敌人造成伤害时，相当于你传奇决心的部分提升为1级（冲击&mdash;&mdash;严重&mdash;&mdash;恶性），并且目标受到你的伤害其治疗难度上升1级。（治疗冲击伤害如同治疗严重，治疗严重伤害如同治疗恶性，恶性伤害无法治疗）</br>
+并且每当你花费自身的龙气能量驱动使用龙气的技能或者招式时，每使用一个，则接下来你全检定获得1DP能量加值，本加值可以无限叠加，本加值每轮最多获得1点，最多持续一个场景。</br>
+</br>
+</br>
+</br>
+龙气噬身</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：以自身为中心</br>
+目标：见下</br>
+范围：决心值/米为半径</br>
+持续：立即</br>
+描述：你将汹涌的龙气化做龙形，吞噬敌人的肉体和灵魂</br>
+效果：你选择范围内的一个目标发起攻击，若成功造成伤害，则可以选择范围内的第二个目标进行攻击，第二次攻击获得相当于第一次攻击造成伤害值/点DP完美加值，若成功造成伤害，则可以选择范围内的第三个目标进行攻击，第三次攻击获得相当于第一次和第二次攻击造成伤害值/点DP完美加值，以此类推，直至范围内没有目标为止，每个目标只会受到本攻击一次。</br>
+同时，使用本技能后，这些攻击造成的伤害全部为纯能量伤害。</br>
+</br>
+</br>
+</br>
+草木皆兵</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：决心值*10米</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+描述：你以浓厚的原始龙气笼罩敌人。</br>
+效果：你对目标造成相当于你决心值的腐蚀严重伤害，目标耐力+决心豁免。</br>
+如果目标身边相当于你传奇决心/米半径内还有其他敌人，他们受到相当于目标受到伤害数的腐蚀严重伤害，反射豁免，目标本身不会受到2次伤害。</br>
+同时，若你因此每对一个目标造成一次伤害，则获得1点治疗点，本场景结束时，每点治疗点可以恢复自身1点冲击伤害，每3点治疗点可以恢复自身1点严重伤害，每9点治疗点可以自身恢复1点恶性伤害。</br>
+</br>
+</br>
+</br>
+五雷封界</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：决心值*10米</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+描述：你从天空降下雷鸣般的龙气攻击敌人。</br>
+效果：你对目标造成相当于你决心值的雷电严重伤害，目标反射豁免。</br>
+如果目标身边相当于你传奇决心/米半径内还有其他敌人，他们受到相当于目标受到伤害数的雷电严重伤害，反射豁免，目标本身不会受到2次伤害。</br>
+所有受到伤害的目标，其获得相当于其受到伤害的麻痹点数，强韧豁免，可以叠加，持续一个场景。</br>
+</br>
+</br>
+</br>
+炎龙烈火</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：决心值*10米</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+描述：你召唤出灼热的龙气焚烧对手。</br>
+效果：你对目标造成相当于你决心值的火焰严重伤害，目标意志豁免，</br>
+若目标受到伤害，则目标及其身边相当于你传奇决心/米半径内还有其他敌人受到相当于伤害数的燃烧点数，反射豁免，可以叠加。</br>
+</br>
+</br>
+长空冰瀑</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：决心值*10米</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+描述：你的龙气化为极寒的冰瀑席卷敌人。</br>
+效果：你对目标造成相当于你决心值的寒冰严重伤害，目标强韧豁免，</br>
+如果目标身边相当于你传奇决心/米半径内还有其他敌人，他们受到相当于目标受到伤害数的寒冰严重伤害，强韧豁免，目标本身不会受到2次伤害。</br>
+同时，若你因此每对一个目标造成一次伤害，则获得1点精气点，本场景结束时，每点精气点可以恢复自身1点龙气。</br>
+</br>
+</br>
+</br>
+地龙卷甲</br>
+价格：B+2000</br>
+动作：标准动作</br>
+能耗：5点龙气</br>
+射程：决心值*20米</br>
+目标：一个目标</br>
+范围：无</br>
+持续：见下</br>
+描述：你的龙气化为撕裂敌人爪牙。</br>
+被动：你增加6点天生防御，当你驱动龙气使用任何技能，招式时，若该技能需要检定，则该技能中你所有的检定额外获得2个附加成功。</br>
+效果：启动后，目标受到相当于你风度值的物理严重伤害，力量+运动进行豁免。若成功造成伤害，则以目标为中心，传奇决心/米范围内的所有敌对目标（包括目标本身），其攻击检定失去相当于你本称号等级的附加成功，持续一个场景。</br>
+</br>
+</br>
+</br>
+大逆天谴</br>
+价格：B+2000</br>
+动作：整轮动作</br>
+能耗：5点龙气</br>
+射程：以你为中心</br>
+目标：所有敌对目标</br>
+范围：50米半径</br>
+持续：立即</br>
+描述：你将汹涌的龙气化做天怒的雷光，惩罚污秽的灵魂</br>
+效果：范围内所有目标受到相当于你决心值的纯能量冲击伤害，无豁免。如果受到伤害的目标为黑暗生物，那么冲击伤害上升为严重伤害 。</br>
+</br>
+</br>
+</br>
+炼气士A级技能树：</br>
+</br>
+封龙诀</br>
+价格：A+4000</br>
+能耗：7点龙气</br>
+动作：自由动作</br>
+射程：以你为中心</br>
+目标：见下</br>
+范围：敏感范围</br>
+持续：意志值/轮</br>
+描述：对龙气的掌握让你更熟练的运用这股力量，你可以窥探万物气运，并加以改变。</br>
+效果：你可以范围的内相当于你传奇风度+1名敌方目标的全检定受到24DP幸运减值或者使范围内相当于你传奇风度+1名友方目标的全检定获得24DP幸运加值。</br>
+每场景本能力只能使用一次。</br></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

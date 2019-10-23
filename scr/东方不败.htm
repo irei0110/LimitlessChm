@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(446);
+  parent.nav.tree.selectNode(574);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,300 +179,137 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="基础拳法.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="无名肉搏技.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="技艺.htm">技艺</A> &gt; <A href="$$unsavedpage25.htm">肉搏技艺</A> &gt; </div>
-<div id="winchm_template_title">东方不败</div>
-<div id="winchm_template_content"><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">流派 
-东方不败<SPAN lang=EN-US> 
-A+6000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">未来世纪<SPAN 
-lang=EN-US>56</SPAN>年<SPAN lang=EN-US>,</SPAN>亚洲尊者为了重新使得高达武斗会回归正统<SPAN 
-lang=EN-US>,</SPAN>参加了第十二届大会<SPAN lang=EN-US>,</SPAN>成功以自己的力量使得已经变味的高达武斗会<SPAN 
-lang=EN-US>,</SPAN>重新成为拳与拳的格斗大会<SPAN 
-lang=EN-US>.</SPAN>流派东方不败夸张的强，是经由历代的累积和苛刻的修行才能获得的力量，而尊者已经达到了空手拆机的水准。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：只拥有气 
-如果之后拥有其它能量，失去本强化所有效果，不返还分数。<SPAN lang=EN-US> </SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">在学会本技能后，因为艰苦的修炼，你获得全属性<SPAN 
-lang=EN-US>+5</SPAN>的增强加值，如果处于明镜止水状态下，全属性再<SPAN 
-lang=EN-US>+5</SPAN>增强加值。（在进入明镜止水状态后，全身包括头发，衣物都将变为金黄色，获得风度自动成功的<SPAN 
-lang=EN-US>DR</SPAN>，在躲避范围攻击和意志对抗时，也会获得相应的自动成功。）天生武器可以造成严重伤害，同时获得“气”能量池。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">你的气可以用来灌注物体，使得原本很软的物体变为你所拥有专业的白刃武器。比如腰带，头巾等。消耗<SPAN 
-lang=EN-US>1</SPAN>点气，使其攻击距离变为<SPAN lang=EN-US>10</SPAN>米，伤害变为<SPAN 
-lang=EN-US>2L</SPAN>，获得破甲<SPAN lang=EN-US>1 </SPAN>硬度为<SPAN 
-lang=EN-US>1</SPAN>。每额外灌注<SPAN lang=EN-US>1</SPAN>点气，可以额外获得<SPAN 
-lang=EN-US>1L</SPAN>伤害，破甲<SPAN lang=EN-US>1</SPAN>，硬度提高<SPAN 
-lang=EN-US>1</SPAN>，提高<SPAN 
-lang=EN-US>10</SPAN>米攻击距离。一次灌入上限为耐力自动成功点或肉搏自动成功点，取高，至少为<SPAN 
-lang=EN-US>1</SPAN>。持续至脱手或战斗结束为止。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">你使用力量或敏捷中较高的一项作为你战斗方面的主要属性（包括但不限于攻击，擒抱等），当你在文学专业上拥有兵法专业时，也可以将智力增加到攻击和防御判定上，上限为肉搏等级<SPAN 
-lang=EN-US>+1</SPAN>，肉搏上每有一个自动成功，上限额外提升一点。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">在针对机械或类机械生物（比如魔像，石像等，当然还有代表物，高达！）时，不会因为对方体积而受到任何减值，对方仅仅针对你不会因体积获得加值。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US>xx</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">手指<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败<SPAN lang=EN-US> </SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">消耗<SPAN 
-lang=EN-US>5</SPAN>点气，进行一次冲锋攻击，在这次攻击中，你可以无减值攻击对方头部，不造成伤害。每一成功带来一点晕眩，且对方无法以耐力<SPAN 
-lang=EN-US>+</SPAN>生存抵抗。你在出招前可以选择三种类型，你的这次攻击将全部视为此类型伤害，分别为神圣<SPAN 
-lang=EN-US>/</SPAN>纯能量<SPAN lang=EN-US>/</SPAN>黑暗。因为选择的能量不同，招式名称分别为爆热神手指<SPAN 
-lang=EN-US>/</SPAN>闪光手指<SPAN 
-lang=EN-US>/</SPAN>暗黑手指，此次攻击必须为徒手攻击。如果处于明镜止水状态，此次攻击结束后可以以一个自由动作，消耗<SPAN 
-lang=EN-US>5</SPAN>点气，高喊“<SPAN lang=EN-US>heart 
-end</SPAN>”并进行一次肉搏技能判定，判定成功数为对方受到的伤害。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">神之台风斩<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">消耗<SPAN 
-lang=EN-US>3</SPAN>点气，以一个整轮动作进行移动，移动距离为速度的一半，对移动距离中武器攻击范围内的所有生物造成范围伤害，伤害值为武器伤害<SPAN 
-lang=EN-US>+</SPAN>白刃自动成功数。进行一个白刃判定，成功数为对方反射时的减值。如果双手各使用一把武器，武器伤害相加。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">超级霸王电影弹<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">消耗<SPAN 
-lang=EN-US>4</SPAN>点气，以一个整轮动作进行移动，移动距离为基础移动速度。对移动中所碰触地任何生物（自由选择）进行一次肉搏判定，在这次判定中，你每多攻击一名敌人则受到<SPAN 
-lang=EN-US>-2DP</SPAN>减值。若你处于明镜止水的状态下，敌人减少<SPAN lang=EN-US>4</SPAN>点基础防御。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">石破天惊拳<SPAN 
-lang=EN-US> A+8000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败 明镜止水<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">这需要两个整轮来引导力量，且必须处于明镜止水状态。第一轮，你在明镜止水状态下将所有气压缩融合，集中于你的一拳上，拳上会发出刺眼的光亮。这种强度是如此明显<SPAN 
-lang=EN-US>,</SPAN>任何<SPAN lang=EN-US>100</SPAN>米内生物在判定上都会受到你风度的<SPAN 
-lang=EN-US>dp</SPAN>减值<SPAN lang=EN-US>,</SPAN>这是环境减值，直到你发出此拳后才解除。任何<SPAN 
-lang=EN-US>1000</SPAN>米内生物都能感受到这一拳的力量，普通生物会为了安全尽量离开。此拳会有可能吸引剧情人物甚至非本场剧情人物的注意。第二轮，你将所产生气劲再度压缩回你的那拳上，同时气能量槽归<SPAN 
-lang=EN-US>0</SPAN>，并打出那惊天动地的一拳，没有任何东西能抵挡这一拳的威力，你进行一次标准的近战攻击，你的这次攻击无视对手的护甲和天生防御以及力场防御，即使是空间阻断，次元变换也不能对这一击构成任何妨碍，你为此所清空的每一点气为这次攻击提供<SPAN 
-lang=EN-US>1DP</SPAN>的加值，每<SPAN lang=EN-US>5</SPAN>点气再提供<SPAN 
-lang=EN-US>1</SPAN>个自动成功，在你进行第一轮蓄气之后<SPAN lang=EN-US>,</SPAN>你就无法再停止这一拳<SPAN 
-lang=EN-US>,</SPAN>第二轮你必须打出这拳或让能量无害散发<SPAN lang=EN-US>,</SPAN>结果和你打出那一拳一样<SPAN 
-lang=EN-US>.</SPAN>一拳打出之后，所有气消散，任何行动有<SPAN lang=EN-US>-5DP</SPAN>不利，持续<SPAN 
-lang=EN-US>3</SPAN>分钟。攻击范围为敏感视觉。此拳虽然出招后速度非常快，但是因为需要很长时间蓄气，对方会有所准备，所以没有高速效果。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">神之分身<SPAN 
-lang=EN-US> B+4000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败 明镜止水<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">明镜止水状态下自动起效，这是身法的一种，你可以额外忽略敏捷和感知这两个属性自动成功点高速。在受到攻击时，对你不会因为连射或类似效果获得<SPAN 
-lang=EN-US>DP</SPAN>加值。在受到范围攻击时，你获得感知自动成功的自动成功。同时每次受到任意攻击时，可以骰一个1D10，如果成功，该次攻击会被完全闪避，这不是机运骰检定。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">十二王方牌大车轮<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">整轮动作以气模拟放出数个小人，外貌为你自己的外貌，体积为<SPAN 
-lang=EN-US>1</SPAN>，放出一个消耗气<SPAN lang=EN-US>1</SPAN>，放出两个消耗<SPAN 
-lang=EN-US>1+3</SPAN>，放出三个消耗<SPAN lang=EN-US>1+3+5</SPAN>以此类推，最多<SPAN 
-lang=EN-US>5</SPAN>个。对你敏感视觉范围内任意个目标放出，每个目标被指定一个小人，会在各判定上减少<SPAN 
-lang=EN-US>2dp</SPAN>和<SPAN lang=EN-US>1</SPAN>个成功。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">归山笑红尘<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败 十二王方牌大车轮<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">以一个自由动作，将放出的小人全部指定在一个目标上，使得该目标被定身。对方以反射判定对抗，<SPAN 
-lang=EN-US>DC</SPAN>为放出的小人数量<SPAN lang=EN-US>*3</SPAN>，同时会因为高速，在反射判定时减少<SPAN 
-lang=EN-US>10dp</SPAN>和<SPAN lang=EN-US>2</SPAN>个自动成功。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">醉舞·再现江湖<SPAN 
-lang=EN-US> C+2000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">前提：流派 
-东方不败<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">消耗<SPAN 
-lang=EN-US>3</SPAN>点气，这次肉搏攻击中你的肉搏伤害额外提升<SPAN lang=EN-US>2</SPAN>，破甲额外提升<SPAN 
-lang=EN-US>4</SPAN>，无视任意来源的<SPAN lang=EN-US>2</SPAN>点<SPAN 
-lang=EN-US>DR</SPAN>，若你的伤害超过对手的体积，则对手被震退伤害减体积米，若对手的后退路线上有障碍物，每因此少退<SPAN 
-lang=EN-US>1</SPAN>米都会受<SPAN lang=EN-US>1</SPAN>点冲击伤害。且此轮中你的防御<SPAN 
-lang=EN-US>+4</SPAN>。如果处于明镜止水状态，在将对方打退后，可以以一个迅捷动作再消耗<SPAN 
-lang=EN-US>5</SPAN>点气，瞬间移动至对方身后，再次进行一次同招式攻击判定。<SPAN 
-lang=EN-US></SPAN></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="八卦掌.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="灵光波动拳.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="流派.htm">流派</A> &gt; <A href="$$unsavedpage56.htm">肉搏流派</A> &gt; </div>
+	<div id="winchm_template_title">东方不败</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-fareast-font-family: 宋体">本质：特异本质</br>
+价格：A+4000</br>
+前提：拥有&ldquo;气&rdquo;能量池，肉搏5</br>
+技能树：开启东方不败技能树</br>
+描述：未来世纪56年,亚洲尊者为了重新使得高达武斗会回归正统,参加了第十二届大会,成功以自己的力量使得已经变味的高达武斗会,重新成为拳与拳的格斗大会.流派东方不败夸张的强，是经由历代的累积和苛刻的修行才能获得的力量，而尊者已经达到了空手拆机的水准。</br>
+特性：刻苦训练（双特性），明镜止水，兵法大师</br>
+刻苦训练：因为艰苦的修炼，你的全属性获得2点修行加值。你可以使用敏捷代替力量作为你的肉搏攻击检定以及擒抱检定，并且你的天生武器可以造成严重伤害。</br>
+明镜止水：若你处于明镜止水的状态下，你全身包括头发，衣物都将变为金黄色，此时你获得相当于你传奇风度的DR/-的伤害减免，同时你的三豁免检定也获得相当于传奇风度的附加成功。</br>
+兵法大师：当你的学识拥有&ldquo;战争&rdquo;专业时，你的攻击和防御获得相当于智力值的修行加值，上限为肉搏等级，你在肉搏上每有1点附加成功，则你的攻击和防御也获得1点附加成功。当你面对机械或类机械生物（比如魔像，石像，构装体，机械载具等）时，不会因为对方体积而受到任何减值，对方仅仅针对你不会因体积获得加值。</br>
+</br>
+</br>
+</br>
+东方不败技能树：</br>
+</br>
+神之台风斩</br>
+价格：C+1000</br>
+动作：整轮动作</br>
+能耗：3点气</br>
+射程：触及</br>
+目标：所有目标</br>
+范围：无</br>
+持续：立即</br>
+效果：你进行一次移动，本次移动距离最大为你移动速度的一半。然后你对移动路径中所有处于你触及范围内的目标造成范围伤害，伤害值为武器伤害+肉搏技能成功数。目标反射豁免，你进行一个肉搏攻击检定，每有1点成功数，则目标的反射豁免失去1DP。</br>
+若你处于明镜止水的状态下，则伤害变为武器伤害+肉搏技能等级。</br>
+</br>
+</br>
+</br>
+超级霸王电影弹</br>
+价格：C+1000</br>
+动作：整轮动作</br>
+能耗：3点气</br>
+射程：触及</br>
+目标：所有目标</br>
+范围：无</br>
+持续：立即</br>
+效果：你进行一次移动，本次移动距离最大为你移动速度的一半。然后你对移动路径中所有处于你触及范围内的敌人进行近战肉搏攻击，每个敌人只能受到一次攻击，在这次攻击中，你每多攻击一名敌人则你的攻击DP受到2DP无名减值。</br>
+若你处于明镜止水的状态下，则你不受到减值影响。</br>
+</br>
+</br>
+<br />醉舞&middot;再现江湖</br>
+价格：C+1000</br>
+动作：标准动作</br>
+能耗：3点气</br>
+射程：触及</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+效果：你进行一次近战肉搏攻击，本次攻击武器伤害提升2点，破甲提升2点，并且无视目标2点DR。同时若你造成的伤害超过目标的体积，则目标被击退差值/米，若目标的后退路线上有障碍物，每因此少退1米都会受1点冲击伤害。</br>
+若你处于&ldquo;明镜止水&rdquo;的状态下，则你成功将目标击退后，你可以立即消耗一个迅捷动作以及5点气，瞬间移动至目标身后，然后立即再发动一次&ldquo;醉舞，再现江湖&rdquo;。</br>
+</br>
+</br>
+</br>
+十二王方牌大车轮</br>
+价格：C+1000</br>
+动作：整轮动作</br>
+能耗：见下</br>
+射程：敏感范围</br>
+目标：见下</br>
+范围：无</br>
+持续：3轮</br>
+效果：你以气模拟放出数个小人，外貌为你自己的外貌，体积为1。放出后这些小人会攀附在你敏感范围内选择的目标身上，这些小人由于是气组成的，所以不会受到任何影响。目标每有一个小人攀附，则其全检定承受2DP无名减值并且失去1点附加成功。</br>
+增幅：你每有1点传奇感知，则可以额外花费1+2*次数/点气来召唤一个小人。</br>
+举例：召唤第一个需要消耗1点，召唤第二个需要消耗3点，召唤第三个需要消耗 5点。</br>
+场上最多存在的小人不得超过你的传奇感知/个。若你处于&ldquo;明镜止水&rdquo;的状态下，则上限翻倍。</br>
+</br>
+</br>
+归山笑红尘</br>
+价格：B+2000</br>
+前提：十二王方牌大车轮</br>
+动作：迅捷动作</br>
+能耗：3点气</br>
+射程：敏感范围</br>
+目标：见下</br>
+范围：无</br>
+持续：见下</br>
+效果：你将所有放出的小人全部集中到一个目标身上。目标进行反射豁免，DC为小人的数量*3.若其成功，则小人的持续时间立即结束。若其失败，则进入定身状态，持续时间为差值/轮。目标的反射豁免检定受到相当于你感知值的无名减值。</br>
+</br>
+</br>
+</br>
+爆热神手指/闪光手指/暗黑手指（三选一，一旦选择不可改变）</br>
+价格：B+2000</br>
+动作：整轮动作</br>
+能耗：5点气</br>
+射程：接触</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+效果：你发动一次冲锋，你如常获得冲锋带来的加值与减值。本次攻击你只能选择攻击目标的头部，并且不受到特定部位减值的影响。若成功命中，则本次攻击不造成伤害，而是每造成1点伤害改为对目标造成1点不可豁免的眩晕点数。</br>
+增幅：若你处于明镜止水的状态下。则本次攻击结束后，你可以以一个自由动作，高喊&ldquo;heart end&rdquo;并进行一次肉搏技能判定，每有 1点成功数，对目标造成1点严重伤害。</br>
+本次攻击你根据招式名称造成不同的严重伤害。</br>
+分别为：爆热神手指-神圣伤害。闪光手指-纯能量伤害。暗黑手指-亵渎伤害。</br>
+</br>
+</br>
+</br>
+石破天惊拳</br>
+价格：A+4000</br>
+前提：习得&ldquo;明镜止水&rdquo;</br>
+动作：2个整轮动作</br>
+能耗：见下</br>
+射程：敏感范围</br>
+目标：一个目标</br>
+范围：无</br>
+持续：立即</br>
+效果：发动本技能必须处于明镜止水状态。</br>
+第一轮，你在明镜止水状态下将所有气压缩融合，集中于你的一拳上，拳上会发出刺眼的光亮。这种强度是如此明显，普通生物会为了安全尽量离开。此拳会有可能吸引剧情人物甚至非本场剧情人物的注意。处于以你为中心范围100米内所有目标的全检定受到相当于你风度值的DP环境减值。直到你发出此拳后才解除。</br>
+任何处于以你为中心1000米内所有目标都能感受到这一拳的力量，这表现为其对你直接精确定位。</br>
+第二轮，你将所产生气劲再度压缩回你的那拳上，同时消耗全部的气，并打出那惊天动地的一拳，没有任何东西能抵挡这一拳的威力，你进行一次近战肉搏攻击，触及为你的敏感范围。本次攻击无视目标的盔甲防御，盾牌防御，天生防御以及力场防御。并且无视目标的回避动作。你为此所消耗的每一点气为这次攻击获得1DP的完美加值，每3点气再获得1点附加成功，并且本次攻击中的附加成功不计入伤害上限中。（例1：成功数30，附加成功10，伤害上限32，则最后的成功数为40，例2：成功数30，附加成功10，伤害伤害25，则最后的成功数为35）</br>
+在你进行第一轮蓄气之后，你就无法再停止这一拳,第二轮你必须打出这拳或让能量无害散发，选择散发也会消耗你的全部气能量池。</br>
+第二轮结束后，你的全检定受到5DP无名减值，持续3分钟。</br>
+</br>
+</br>
+<br />神之分身</br>
+价格：A+4000</br>
+前提：习得&ldquo;明镜止水&rdquo;</br>
+动作：被动</br>
+效果：当你处于&ldquo;明镜止水&rdquo;下时自动生效。</br>
+你忽略敏捷与感知取高的高速优势。在受到攻击时，目标针对你无法获得短点射，长点射，连射带来的好处。当你对抗范围效果进行的豁免检定时，获得相当于你传奇感知的附加成功。并且当你受到单体攻击时，你投掷一个1D10，若结果为8，9，10则你无视本次攻击，这不是一个检定。</br>
+这是一个身法。</br><SPAN 
+lang=EN-US></SPAN></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

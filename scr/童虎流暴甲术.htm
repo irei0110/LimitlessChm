@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,150 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
-
+html,div { margin: 0; padding: 0;}
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
-
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
-
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-size: 8pt;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
-
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
-
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
-
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
-
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
-
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
-
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+function d_onafterprint(){
+d_onresize();
+}
+if(!isMobile()){
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(562);
+  parent.nav.tree.selectNode(697);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,189 +179,59 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="New_Item21.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="千年杀.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="技艺.htm">技艺</A> &gt; <A href="$$unsavedpage34.htm">特殊招式</A> &gt; </div>
-<div id="winchm_template_title">童虎流暴甲术</div>
-<div id="winchm_template_content"><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="风行天下.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="千年杀.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="技艺.htm">技艺</A> &gt; <A href="$$unsavedpage66.htm">特殊招式</A> &gt; </div>
+	<div id="winchm_template_title">童虎流暴甲术</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
 style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
 lang=EN-US>[</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">技艺·使用技<SPAN 
-lang=EN-US>]</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">“最强的圣衣也好，武器也罢，都只是让自己徒生傲慢。”<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">童虎流暴衣术<SPAN 
-lang=EN-US> D+1000</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">从<SPAN 
-lang=EN-US>17</SPAN>世纪起，在圣斗士之间就流传着一种超然的战斗技巧，那就是在战斗时脱去圣衣，集迷惑敌人、震慑敌人为一体的战术。使用后既可趁机杀敌，皆可利用机会撤退。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">学习后，得到的最初能力就是快速脱掉盔甲，不管是防弹衣还是动力装甲。消耗<SPAN 
-lang=EN-US>1</SPAN>点意志或<SPAN 
-lang=EN-US>1</SPAN>点内力（其他能量也可），用一个整轮动作就可完全脱掉盔甲，该盔甲必须有<SPAN 
-lang=EN-US>2</SPAN>点以上防御加值。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">同时所有看到的敌人都要进行一次意志鉴定，<SPAN 
-lang=EN-US>DC=</SPAN>你的风度和体质上的自动成功。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">失败的话会进入震慑<SPAN 
-lang=EN-US>1</SPAN>轮，就算成功，在接下来的<SPAN lang=EN-US>1</SPAN>轮内，他们也不会攻击你。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">异性在判定时<SPAN 
-lang=EN-US>-3</SPAN>不利，基佬自动失败。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">一场战斗中同一个对手只受一次暴衣带来效果。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">后续修炼：<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">熟练暴甲<SPAN 
-lang=EN-US> 2XP</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">当使用超过<SPAN 
-lang=EN-US>10</SPAN>次时，再投入<SPAN lang=EN-US>2</SPAN>点<SPAN 
-lang=EN-US>XP</SPAN>，可以得到专业：脱衣术。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">以后每次战时暴衣，就不消耗意志<SPAN 
-lang=EN-US>/</SPAN>能量。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">闪光变装<SPAN 
-lang=EN-US> 3XP</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">你在使用脱衣术时会发出强烈的光芒，让人不能直视，除了意志以外还要进行一次强韧检定，失败得到等额的目眩点数。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">北斗暴衫拳<SPAN 
-lang=EN-US> 4XP</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">流传于另一流派的暴衫技法，这招不是用于脱甲，而是粉碎你穿着的衬衫。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">必须穿着装甲加值不超过<SPAN 
-lang=EN-US>1/1</SPAN>的衬衫形外套，在整轮暴衫同时，发出怪叫和打出拳法，下轮肉搏攻击得到<SPAN 
-lang=EN-US>+3DP</SPAN>神圣加值。<SPAN lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">狂暴脱甲<SPAN 
-lang=EN-US> 5XP</SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">你的装甲并不是提供防护，而是限制你使用力量。<SPAN 
-lang=EN-US></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">你如果拥有变身<SPAN 
-lang=EN-US>/</SPAN>狂暴能力（比如狼人的变形），可在整轮脱甲同时使用该能力，你可得到<SPAN 
-lang=EN-US>1</SPAN>点额外属性，增加到任意身体属性上。</SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast"></SPAN>&nbsp;</P><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">超能力换装术<SPAN 
-lang=EN-US>C+1500<?xml:namespace prefix = o ns = 
-"urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">学习后，你可以以一个整轮动作消耗<SPAN 
-lang=EN-US>1</SPAN>点能量把自己身上的衣服换成别的其他任何款式。并且周围的所有敌人必须通过一个<SPAN 
-lang=EN-US>DC=5</SPAN>的意志检定，否则在本轮内不能攻击你。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast" 
-lang=EN-US><o:p></o:p></SPAN></P>
-<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">如果在换装的同时摆出合适的<SPAN 
-lang=EN-US>POSE</SPAN>，那么本次战斗中你在所有检定中获得<SPAN lang=EN-US>+1</SPAN>士气加值。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal></SPAN></P></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast">[技艺&middot;使用技]</BR>
+<br />&ldquo;最强的圣衣也好，武器也罢，都只是让自己徒生傲慢。&rdquo;</BR>
+<br />童虎流暴衣术 D+1000</BR>
+<br />从17世纪起，在圣斗士之间就流传着一种超然的战斗技巧，那就是在战斗时脱去圣衣，集迷惑敌人、震慑敌人为一体的战术。使用后既可趁机杀敌，皆可利用机会撤退。</BR>
+<br />学习后，得到的最初能力就是快速脱掉盔甲，不管是防弹衣还是动力装甲。消耗1点意志或1点内力（其他能量也可），用一个整轮动作就可完全脱掉盔甲，该盔甲必须有2点以上防御加值。</BR>
+<br />同时所有看到的敌人都要进行一次意志鉴定，DC=你的风度和体质上的自动成功。</BR>
+<br />失败的话会进入震慑1轮，就算成功，在接下来的1轮内，他们也不会攻击你。</BR>
+<br />异性在判定时-3不利，基佬自动失败。</BR>
+<br />一场战斗中同一个对手只受一次暴衣带来效果。</BR>
+</BR>
+</BR>
+后续修炼：</BR>
+<br />熟练暴甲 2XP</BR>
+<br />当使用超过10次时，再投入2点XP，可以得到专业：脱衣术。</BR>
+<br />以后每次战时暴衣，就不消耗意志/能量。</BR>
+</BR>
+</BR>
+闪光变装 3XP</BR>
+<br />你在使用脱衣术时会发出强烈的光芒，让人不能直视，除了意志以外还要进行一次强韧检定，失败得到等额的目眩点数。</BR>
+</BR>
+</BR>
+北斗暴衫拳 4XP</BR>
+<br />流传于另一流派的暴衫技法，这招不是用于脱甲，而是粉碎你穿着的衬衫。</BR>
+<br />必须穿着装甲加值不超过1/1的衬衫形外套，在整轮暴衫同时，发出怪叫和打出拳法，下轮肉搏攻击得到+3DP神圣加值。</BR>
+</BR>
+</BR>
+狂暴脱甲 5XP</BR>
+<br />你的装甲并不是提供防护，而是限制你使用力量。</BR>
+<br />你如果拥有变身/狂暴能力（比如狼人的变形），可在整轮脱甲同时使用该能力，你可得到1点额外属性，增加到任意身体属性上。</BR>
+</BR>
+</BR>
+</BR>
+</BR>
+</BR>
+超能力换装术C+1500</BR>
+学习后，你可以以一个整轮动作消耗1点能量把自己身上的衣服换成别的其他任何款式。并且周围的所有敌人必须通过一个DC=5的意志检定，否则在本轮内不能攻击你。</BR>
+<br />如果在换装的同时摆出合适的POSE，那么本次战斗中你在所有检定中获得+1士气加值。</BR>
+</BR><SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P><P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>

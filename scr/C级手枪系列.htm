@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0014)about:internet -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -17,112 +16,170 @@ html,body {
 
 
 
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+
 <style>
-html {
-	overflow-y:scroll;
-}
+html,div { margin: 0; padding: 0;}
 
 body {
-	background-image: url(template1/back.png);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
 	padding: 0px;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
 }
 
-#winchm_template_button {
-	position: fixed; 
-	float: right; 
-	right: 15px; 
-	top: 15px;
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
 }
 
-#winchm_template_navigation {
+#winchm_template_top{
 	padding: 0px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
 
-	font-size: 8pt;
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #4A4A4A;
-	text-align: left;
+	font-weight: normal;
+	color: #585858;
 }
 
-#winchm_template_title {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	color: #005680;
-	text-align: left;
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
 }
 
 #winchm_template_content{
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
 	width: auto  !important;
 	width: 100%;
 }
 
-
-#winchm_template_footer {
-	padding: 0px;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-bottom: 15px;
-	margin-right: 0px;
-
-	padding-top: 7px;
+#winchm_template_footer{
 	border-width: 1px;
-	border-color: #c0c0c0;
+	border-color: #B1CEFE;
 	border-top-style: solid;
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #575757;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
 	text-align: left;
 }
 
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
 @media print
 {
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
 #winchm_template_button{
 visibility:hidden;
 }
 }
 
-#winchm_template_navigation a:link	{text-decoration: none;color: 004080}
-#winchm_template_navigation a:visited  {text-decoration: none; color: #004080}
-#winchm_template_navigation a:active {text-decoration: none; color: #004080}
-#winchm_template_navigation a:hover {text-decoration: none;color: #0000FF}
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
 
-a:link	{text-decoration: underline; color:#0033cc}
-a:visited  {text-decoration: underline; color: #0033cc}
-a:active {text-decoration: underline; color: #0033cc }
-a:hover {text-decoration: underline;color: #ff0000;}
-
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
 </style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
 </head>
 
 <body><script language="JavaScript" type="text/JavaScript">
 function syn(){
 if(parent.nav.tree){
  if(parent.nav.tree.loaded){
-  parent.nav.tree.selectNode(777);
+  parent.nav.tree.selectNode(914);
  }else{
   setTimeout("syn()",500);
 }
@@ -142,151 +199,77 @@ window.onload = function(){originalOnload();parent.contentLoaded = true;};
 }
 </script> 
 
-<div id="winchm_template_button"><A href="D级其他武器.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template1/btn_prev_n.gif" border="0"></a><A href="C级机枪系列.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template1/btn_next_n.gif" border="0"></a></div>
-<div id="winchm_template_navigation">Help &gt; 
-<A href="资源部分.htm">资源部分</A> &gt; <A href="物品.htm">物品</A> &gt; <A href="$$unsavedpage43.htm">科技本质</A> &gt; <A href="$$unsavedpage46.htm">C级系列武器</A> &gt; </div>
-<div id="winchm_template_title">C级手枪系列</div>
-<div id="winchm_template_content"><SPAN 
-style="FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="$$unsavedpage81.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="C级机枪系列.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="资源部分.htm">资源部分</A> &gt; <A href="物品.htm">物品</A> &gt; <A href="$$unsavedpage78.htm">科技本质</A> &gt; <A href="$$unsavedpage81.htm">C级系列武器</A> &gt; </div>
+	<div id="winchm_template_title">C级手枪系列</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-ascii-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast" 
 lang=EN-US>
 <P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
+style="LAYOUT-GRID-MODE: both; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 150%; mso-layout-grid-align: auto" 
 class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>===========================================================================================================<?xml:namespace 
-prefix = o ns = "urn:schemas-microsoft-com:office:office" 
-/><o:p></o:p></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>X-GUN<o:p></o:p></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">价格：<SPAN 
-lang=EN-US>C+500<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">分类：手枪<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">体积：<SPAN 
-lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">前提：需求力量<SPAN 
-lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">武器基本属性：武器伤害<SPAN 
-lang=EN-US>0B</SPAN>，高速<SPAN lang=EN-US>6</SPAN>，基本射程<SPAN 
-lang=EN-US>20</SPAN>米，装弹量<SPAN lang=EN-US>20<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">武器特殊属性：无<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">耗能：本武器使用标准能量电池供能，一枚标准能量电池可以发射<SPAN 
-lang=EN-US>20</SPAN>发，更换电池是一个移动动作。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>X</SPAN><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">光：本武器拥有<SPAN 
-lang=EN-US>X</SPAN>光镜，在基本射程范围内可以透视生物骨骼和内脏。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">体内伤害：本武器无法正常造成伤害，使用本武器进行攻击时，视为接触攻击，若成功命中，则目标在其回合结束时，受到<SPAN 
-lang=EN-US>4</SPAN>点恶性伤害，该恶性伤害无视伤害减免。<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>=========================================================================================================== 
-<o:p></o:p></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>Y-GUN<o:p></o:p></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">本质：科技本质<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">价格：<SPAN 
-lang=EN-US>C+500<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">分类：手枪<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">体积：<SPAN 
-lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">前提：需求力量<SPAN 
-lang=EN-US>2<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">武器基本属性：武器伤害<SPAN 
-lang=EN-US>0B</SPAN>，高速<SPAN lang=EN-US>6</SPAN>，标准射程<SPAN 
-lang=EN-US>20</SPAN>米，装弹量<SPAN lang=EN-US>1<o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">武器特殊属性：无<SPAN 
-lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">耗能：本武器使用标准能量电池供能，一枚标准能量电池可以发射<SPAN 
-lang=EN-US>1</SPAN>发，更换电池是一个移动动作。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">抓捕：本武器无法正常造成伤害，使用本武器进行攻击时，视为接触攻击，若成功命中，则对目标展开擒抱，目标的挣脱（逃脱）的<SPAN 
-lang=EN-US>DC</SPAN>为你<SPAN lang=EN-US>10</SPAN>，若目标的生命值没有完好生命值，则<SPAN 
-lang=EN-US>DC</SPAN>变为<SPAN lang=EN-US>20</SPAN>。一旦目标挣脱成功，则无效，擒抱维持的时间为<SPAN 
-lang=EN-US>1</SPAN>分钟。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体">连续抓捕：你可以对已经被“抓捕”特性擒抱成功目标继续发动“抓捕”特性，这样做会让目标挣脱（逃脱）的<SPAN 
-lang=EN-US>DC</SPAN>增加<SPAN lang=EN-US>5</SPAN>点，并且持续时间延长<SPAN 
-lang=EN-US>1</SPAN>分钟。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
-<P 
-style="LINE-HEIGHT: 150%; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: both; mso-layout-grid-align: auto" 
-class=MsoNormal><SPAN 
-style="LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-bidi-font-family: 宋体" 
-lang=EN-US>=========================================================================================================== 
-<o:p></o:p></SPAN></P></SPAN></div> 
-<div id="winchm_template_footer">Copyright &copy; 2014. All rights reserved.</div>
+style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; LINE-HEIGHT: 150%; mso-bidi-font-family: 宋体; mso-ascii-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast" 
+lang=EN-US>x===========================================================================================================</br>
+X-GUN</br>
+本质：科技本质</br>
+价格：C+500</br>
+分类：手枪</br>
+体积：2</br>
+前提：需求力量2</br>
+武器基本属性：武器伤害0B，高速6，基本射程20米，装弹量20</br>
+武器特殊属性：无</br>
+耗能：本武器使用标准能量电池供能，一枚标准能量电池可以发射20发，更换电池是一个移动动作。</br>
+X光：本武器拥有X光镜，在基本射程范围内可以透视生物骨骼和内脏。</br>
+体内伤害：本武器无法正常造成伤害，使用本武器进行攻击时，视为接触攻击，若成功命中，则目标在其回合结束时，受到4点恶性伤害，该恶性伤害无视伤害减免。</br>
+===========================================================================================================</br>
+Y-GUN</br>
+本质：科技本质</br>
+价格：C+500</br>
+分类：手枪</br>
+体积：2</br>
+前提：需求力量2</br>
+武器基本属性：武器伤害0B，高速6，标准射程20米，装弹量1</br>
+武器特殊属性：无</br>
+耗能：本武器使用标准能量电池供能，一枚标准能量电池可以发射1发，更换电池是一个移动动作。</br>
+抓捕：本武器无法正常造成伤害，使用本武器进行攻击时，视为接触攻击，若成功命中，则对目标展开擒抱，目标的挣脱（逃脱）的DC为你10，若目标的生命值没有完好生命值，则DC变为20。一旦目标挣脱成功，则无效，擒抱维持的时间为1分钟。</br>
+连续抓捕：你可以对已经被&ldquo;抓捕&rdquo;特性擒抱成功目标继续发动&ldquo;抓捕&rdquo;特性，这样做会让目标挣脱（逃脱）的DC增加5点，并且持续时间延长1分钟。</br>
+===========================================================================================================</br>
+冰霜冲击枪</br>
+本质：科技本质</br>
+价格：C+1000</br>
+分类：手枪</br>
+体积：1</br>
+前提：力量需求4</br>
+描述:&ldquo;我们的世界值得我们为之奋斗！&rdquo; <br />周美灵在解决全球变暖和气候恶化方面是世界级的权威，在一次科研小组的长期冬眠中，科考站的能源系统出现了故障，除了她以外的所有科研人员尽数牺牲，仅留下小美与小机器人雪球相依为命。在雪球的帮助下，周美灵成功的设计出了这柄武器，并依靠它攀上高点，接收到了守望先锋直布罗陀检查站的信号。虽然没有那只名叫雪球的小机器人，但主神依旧将它还原出来并加入了兑换列表。</br>
+<br />武器基本属性：武器伤害8L，基本射程30米</br>
+特殊属性：【能量武器】</br>
+寒冷武器：本武器造成的伤害为寒冰伤害。</br>
+冷冻脉冲：使用本武器进行的远程枪械攻击若成功命中目标，则该目标的所有敏捷相关检定承受4DP能量减值，无法豁免。并且会造成等同于攻击成功数的冻结，无法叠加，反射豁免。此外，只要每轮都对同一目标进行该攻击并且命中，这个能量减值将会每轮上升2点，但如果一旦中断了攻击或者没有命中，这个减值会以每轮4点的速度消失。</br>
+耗能：标准能量电池可进行10次射击，换电池是一个整轮动作。</br>
+===========================================================================================================</br>
+<br />和平惩戒者</br>
+本质：科技本质</br>
+价格：C+3000</br>
+分类：手枪</br>
+前提：需求力量8，需求耐力6</br>
+体积：2</br>
+描述：银色大型左轮手枪，经典的六发弹容，十六毫米口径</br>
+武器基本属性：武器伤害10L，基本射程50米.装弹量6.</br>
+武器特殊属性：无</br>
+弹药：弹药使用手枪弹。</br>
+精准角度：精校组件与绝佳的手感赋予了这把武器几乎每时每刻都在最佳状态，再加上刁钻的射击角度。这视为你的攻击能忽视8点任意加值的防御，在攻击前自行选择一种防御类型。</br>
+连环打靶：特殊连射：牛仔们的知名技巧，将枪的连射性发挥到极致，你可以选择在一次远程射击攻击中额外消耗一到五颗子弹，每多使用一颗子弹，你的此次攻击检定-2DP器械减值，获得+1附加成功，一次最多额外消耗5颗子弹。除此以外，这把枪无法进行任何意义上的短点射,连射,扫射,以及火力压制。</br>
+===========================================================================================================</br>
+</br>
+</SPAN></P></SPAN></SPAN></SPAN></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2018. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
 </body>
 </html>
